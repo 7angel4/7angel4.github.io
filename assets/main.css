@@ -1,1 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Pen+Script&display=swap');
 
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F8EDE3;
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    text-align: left;
+    font-weight: 700;
+}
+
+/* Nav bar */
+nav > ul > li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px 15px;
+    width: auto;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A9907E;
+    width: 40vw;
+    margin: 2% 0;
+}
+
+/** Hyperlinks **/
+a {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    word-wrap: break-word;
+    font-family: 'Inter', sans-serif;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

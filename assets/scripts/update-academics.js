@@ -8,8 +8,7 @@ function addTimeBlock(academicPeriod) {
 
 function addTimeBlockFromData(time, title, subjects) {
     const timeBlockLi = document.createElement('li');
-    timeBlockLi.style = `--accent-color: ${COLORS[colorIndex++]}`;
-    let dateDiv = createTimeBlockDiv('time', date);
+    let dateDiv = createTimeBlockDiv('time', time);
     let titleDiv = createTimeBlockDiv('title', title);
     let subjectsDiv = createTimeBlockDiv('subjects', "");
 
