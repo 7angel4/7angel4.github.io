@@ -1,24 +1,30 @@
 const TIMELINE_ELEM = document.getElementById("academic-trajectory");
+const COLORS = [];
+let colorIndex = 0;
 
-function addTimeBlock(color, date, title, subjectList) {
+function addTimeBlock(academicPeriod) {
+    addTimeBlockFromData(academicPeriod.time, academicPeriod.title, academicPeriod.subjects);
+}
+
+function addTimeBlockFromData(time, title, subjects) {
     const timeBlockLi = document.createElement('li');
-    timeBlockLi.style = `--accent-color: ${color}`;
-    let dateDiv = createTimeBlockDiv('date', date);
+    timeBlockLi.style = `--accent-color: ${COLORS[colorIndex++]}`;
+    let dateDiv = createTimeBlockDiv('time', date);
     let titleDiv = createTimeBlockDiv('title', title);
-    let descDiv = createTimeBlockDiv('desc', "");
+    let subjectsDiv = createTimeBlockDiv('subjects', "");
 
     // add contents
     const subjectUl = document.createElement('ul');
-    subjectList.forEach((subject) => {
+    subjects.forEach((subject) => {
         let li = document.createElement('li');
         li.innerHTML = subject;
         subjectUl.appendChild(li);
     });
 
-    descDiv.appendChild(subjectUl);
+    subjectsDiv.appendChild(subjectUl);
     timeBlockLi.appendChild(dateDiv);
     timeBlockLi.appendChild(titleDiv);
-    timeBlockLi.appendChild(descDiv);
+    timeBlockLi.appendChild(subjectsDiv);
     TIMELINE_ELEM.appendChild(timeBlockLi);
 }
 
@@ -29,14 +35,78 @@ function createTimeBlockDiv(className, text) {
     return div;
 }
 
-addTimeBlock('#41516C', '2021', "UMEP Maths at Yr12 (Secondary school)",
-    [
+const umep2021 = {
+    time: '2021',
+    title: "UMEP Maths at Yr12 (Secondary school)",
+    subjects: [
         'MAST10018, Linear Algebra Extension Studies',
         'MAST10019, Linear Algebra Extension Studies'
     ]
-);
-addTimeBlock('#1B5F8C', '2022 Summer', "Intro to CS!",
-    [
-        'COMP10001, Foundations of Computing'
+};
+
+const summer2022 = {
+    time: '2022 Summer',
+    title: "Intro to CS!",
+    subjects: ['COMP10001, Foundations of Computing']
+};
+
+const semOne2022 = {
+    time: '2022 Sem 1',
+    title: 'First formal semester at UoM!',
+    subjects: [
+        'COMP10002, Foundations of Algorithms',
+        'ENVS10006, Mapping Environments',
+        'MAST20004, Probability',
+        "SCIE10005, Today's Science, Tomorrow's World"
     ]
-);
+};
+
+const semTwo2022 = {
+    time: '2022 Sem 2',
+    title: "Second year disguised as first year...",
+    subjects: [
+        'COMP20003, Algorithms and Data Structures',
+        'COMP20008, Elements of Data Processing',
+        'INFO20003, Database Systems',
+        'SWEN20003, Object Oriented Software Development'
+    ]
+};
+
+const summer2023 = {
+    time: '2023 Summer',
+    title: 'Intensive summer!',
+    subjects: [
+        'FNCE10002, Principles of Finance',
+        'MAST20005, Statistics'
+    ]
+};
+
+const semOne2023 = {
+    time: '2023 Sem 1',
+    title: "Begin teaching!",
+    subjects: [
+        'COMP30023, Computer Systems',
+        'COMP30027, Machine Learning',
+        'MAST30025, Linear Statistical Models',
+        'SWEN30006, Software Modelling and Design'
+    ]
+}
+
+const semTwo2023 = {
+    time: '2023 Sem 2',
+    title: 'Final sem at UoM...',
+    subjects: [
+        'COMP30022, IT Project',
+        'COMP30026, Models of Computation',
+        'MAST30001, Stochastic Modelling',
+        'MAST30027, Modern Applied Statistics'
+    ]
+};
+
+addTimeBlock(umep2021);
+addTimeBlock(summer2022);
+addTimeBlock(semOne2022);
+addTimeBlock(semTwo2022);
+addTimeBlock(summer2023);
+addTimeBlock(semOne2023);
+addTimeBlock(semTwo2023);
