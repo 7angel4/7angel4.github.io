@@ -1,5 +1,5 @@
 const TIMELINE_ELEM = document.getElementById("academic-trajectory");
-const COLORS = ["white", "black", "white", "black", "white", "black"];
+const COLORS = ["#8D7B68", "#AD8B73", "#A4907C", "#CEAB93", "#C8B6A6", "#E3CAA5", "#DFD3C3", "#FFEBC1"];
 let colorIndex = 0;
 
 function addTimeBlock(academicPeriod) {
@@ -8,7 +8,7 @@ function addTimeBlock(academicPeriod) {
 
 function addTimeBlockFromData(time, title, subjects) {
     const timeBlockLi = document.createElement('li');
-    timeBlockLi.style = `--accent-color: ${COLORS[colorIndex]}`;
+    timeBlockLi.style.setProperty("--accent-color", COLORS[colorIndex++]);
     let dateDiv = createTimeBlockDiv('time', time);
     let titleDiv = createTimeBlockDiv('title', title);
     let subjectsDiv = createTimeBlockDiv('subjects', "");
@@ -37,10 +37,10 @@ function createTimeBlockDiv(className, text) {
 
 const umep2021 = {
     time: '2021',
-    title: "UMEP Maths at Yr12 (Secondary school)",
+    title: "UMEP Maths at Yr12 (still a high school kid)",
     subjects: [
         'MAST10018, Linear Algebra Extension Studies',
-        'MAST10019, Linear Algebra Extension Studies'
+        'MAST10019, Calculus Extension Studies'
     ]
 };
 

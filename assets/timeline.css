@@ -9,7 +9,8 @@
     grid-auto-columns: max-content;
     column-gap: var(--col-gap);
     list-style: none;
-    width: min(60rem, 90%);
+    width: min(70rem, 90%);
+    margin-top: 2rem;
     margin-inline: auto;
 }
 
@@ -40,7 +41,7 @@
 }
 
 /* time */
-.timeline li .date {
+.timeline li .time {
     --timeH: 3rem;
     height: var(--timeH);
     margin-inline: calc(var(--inlineP) * -1);
@@ -60,7 +61,7 @@
 }
 
 /* time flap */
-.timeline li .date::before {
+.timeline li .time::before {
     content: "";
     width: var(--inlineP);
     aspect-ratio: 1;
@@ -74,7 +75,7 @@
 }
 
 /* circle */
-.timeline li .date::after {
+.timeline li .time::after {
     content: "";
     position: absolute;
     width: 2rem;
@@ -147,16 +148,16 @@
         grid-row: 2/4;
     }
 
-    .timeline li:nth-child(odd) .date::before {
+    .timeline li:nth-child(odd) .time::before {
         clip-path: polygon(0 0, 100% 0, 100% 100%);
         left: 0;
     }
 
-    .timeline li:nth-child(odd) .date::after {
+    .timeline li:nth-child(odd) .time::after {
         transform: translate(-50%, -50%);
         left: calc(100% + var(--col-gap) + var(--line-w) / 2);
     }
-    .timeline li:nth-child(odd) .date {
+    .timeline li:nth-child(odd) .time {
         border-radius: 0 calc(var(--timeH) / 2) calc(var(--timeH) / 2) 0;
     }
 }
