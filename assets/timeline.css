@@ -160,11 +160,3 @@
         border-radius: 0 calc(var(--timeH) / 2) calc(var(--timeH) / 2) 0;
     }
 }
-
-.credits {
-    margin-top: 1rem;
-    text-align: right;
-}
-.credits a {
-    color: var(--color);
-}
