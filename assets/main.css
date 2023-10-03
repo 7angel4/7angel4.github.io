@@ -9,6 +9,8 @@
 }
 
 body {
+    --color: rgba(30, 30, 30);
+    --bgColor: rgba(245, 245, 245);
     background-color: #F8EDE3;
     min-height: 100vh;
     display: grid;
@@ -22,6 +24,19 @@ body {
 h1 {
     text-align: left;
     font-weight: 700;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+ul li {
+    line-height: 1.7rem;
+    margin-left: 0;
+}
+
+ul li li {
+    margin-left: 2rem;
 }
 
 /* Nav bar */

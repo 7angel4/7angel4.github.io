@@ -1,5 +1,5 @@
 const TIMELINE_ELEM = document.getElementById("academic-trajectory");
-const COLORS = [];
+const COLORS = ["white", "black", "white", "black", "white", "black"];
 let colorIndex = 0;
 
 function addTimeBlock(academicPeriod) {
@@ -8,19 +8,21 @@ function addTimeBlock(academicPeriod) {
 
 function addTimeBlockFromData(time, title, subjects) {
     const timeBlockLi = document.createElement('li');
+    timeBlockLi.class = 'time-block';
+    timeBlockLi.style = `--accent-color: ${COLORS[colorIndex]}`;
     let dateDiv = createTimeBlockDiv('time', time);
     let titleDiv = createTimeBlockDiv('title', title);
     let subjectsDiv = createTimeBlockDiv('subjects', "");
 
     // add contents
-    const subjectUl = document.createElement('ul');
+    const subjectDl = document.createElement('dl');
     subjects.forEach((subject) => {
-        let li = document.createElement('li');
-        li.innerHTML = subject;
-        subjectUl.appendChild(li);
+        let dt = document.createElement('dt');
+        dt.innerHTML = subject;
+        subjectDl.appendChild(dt);
     });
 
-    subjectsDiv.appendChild(subjectUl);
+    subjectsDiv.appendChild(subjectDl);
     timeBlockLi.appendChild(dateDiv);
     timeBlockLi.appendChild(titleDiv);
     timeBlockLi.appendChild(subjectsDiv);
