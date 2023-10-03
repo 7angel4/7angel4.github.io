@@ -5,3 +5,4 @@
 /httpRequests/
 *.iml
 assets/resources
+*.xml
