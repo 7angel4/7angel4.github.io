@@ -42,10 +42,14 @@ nav {
     margin: 2% 0;
 }
 
+nav > ul > li > a {
+    color: white;
+}
+
 /** Hyperlinks **/
 a {
     background-color: transparent;
-    color: white;
+    color: #006BC8;
     text-decoration: none;
     word-wrap: break-word;
     font-family: 'Inter', sans-serif;
