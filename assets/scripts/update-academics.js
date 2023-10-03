@@ -8,7 +8,6 @@ function addTimeBlock(academicPeriod) {
 
 function addTimeBlockFromData(time, title, subjects) {
     const timeBlockLi = document.createElement('li');
-    timeBlockLi.class = 'time-block';
     timeBlockLi.style = `--accent-color: ${COLORS[colorIndex]}`;
     let dateDiv = createTimeBlockDiv('time', time);
     let titleDiv = createTimeBlockDiv('title', title);
@@ -84,7 +83,7 @@ const summer2023 = {
 
 const semOne2023 = {
     time: '2023 Sem 1',
-    title: "Begin teaching!",
+    title: "Teaching begins!",
     subjects: [
         'COMP30023, Computer Systems',
         'COMP30027, Machine Learning',
