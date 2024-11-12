@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Angel He's Personal Website</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/bib.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?...">
+    </script>
+</head>
+<body>
+<!-- Custom navigation bar -->
+<header>
+    <h1>Academics</h1>
+    <custom-nav></custom-nav>
+</header>
+
+<!-- Main content of the page -->
+<main>
+    <section id="research">
+        <h2>Research</h2>
+        <section id="bibliography">
+            <bib-item
+                    title="All In: Give me your money!"
+                    authors="Angel Y. He, Mark Holmes"
+                    year="2024"
+                    source="arXiv"
+                    thumbnail="assets/resources/thumbnails/all-in-thumbnail.png"
+                    abstract="We present a computer assisted proof for a result concerning a three player betting game,
+                    introduced by Angel and Holmes. The three players start with initial capital \\(x,y,z > 0\\)
+                    respectively.
+                    At each step of this game two players are selected at random to bet on the outcome of a fair coin
+                    toss, with the size of the bet being the largest possible, namely the total capital held by the
+                    poorer of the two players at that time. The main quantity of interest is the probability of
+                    player 1 being eliminated (reaching 0 capital) first. Angel and Holmes have shown that this
+                    probability is not monotone decreasing as a function of the initial capital x of player 1.
+                    They conjecture that if \\(x<y<z\\) then player 1 would be better off (less likely to be eliminated
+                    first) by swapping their capital with another player.
+                    <br>
+                    In this paper we present a computer-assisted proof of this conjecture. To achieve this, we
+                    introduce the theoretical framework MeshItUp, and then perform a two-stage reduction to make
+                    MeshItUp computationally feasible, through the use of mixed-integer programming."
+                    pdf-link="https://arxiv.org/pdf/2410.15329"
+                    code-link="https://github.com/7angel4/betting-game-proof"
+            >
+            </bib-item>
+            <bib-item
+                    title="Hitting probabilities in 3-player betting games"
+                    authors="Angel Y. He"
+                    year="2023"
+                    source="University of Melbourne, School of Mathematics Vacation Scholarships Program"
+                    thumbnail="assets/resources/thumbnails/3-player-betting-game-thumbnail.png"
+                    abstract="We study two variants of the models examined by Prof. Persi Diaconis.
+                    Denote the players’ fortunes at each round as \\( (X_n, Y_n, Z_n) \in \mathbb{N} \\),
+                    which evolves as a Markov chain. Write \\( (X_0, Y_0, Z_0) = (x,y,z) \\).
+                    <br>
+                    * Game 1: At each round, a giver and receiver are chosen at random.
+                    The giver transfers the minimum of their fortunes to the receiver.<br>
+                    * Game 2: Only a receiver is chosen each round to receive \\( \min(x,y,z) \\).
+                    <br>
+                    Define the following terminology / representations:<br>
+                    * Loser: First player to reach 0 (if tied in Game 2, pick one randomly).<br>
+                    * Winner: First player to have all the money.<br>
+                    * \\( L_{(x,y,z)} \\): Probability that player 1 loses, given initial state \\( (x,y,z) \\).
+                    <br>
+                    The research problem addressed is the difficulty of attaining \\( L_{(x,y,z)} \\) by hand.
+                    <br>
+                    This poster presents an overview of the program produced in response, and some further analysis
+                    on the first-hand data."
+                    pdf-link="https://ms.unimelb.edu.au/__data/assets/pdf_file/0005/4869815/heangel_189576_18102286_3-player-betting-games-poster-AYH-A2.pdf"
+                    code-link="https://github.com/7angel4/3-person-betting-game"
+            >
+            </bib-item>
+        </section>
+        <section>
+            <collapsible-section text="Other projects I've worked on:">
+                <bib-item
+                        title="PlaniWiki: Educational Website for Planimation"
+                        year="2023"
+                        code-link="https://github.com/planimation/documentation"
+                >
+                </bib-item>
+                <bib-item
+                        title="Simple RPC Server"
+                        year="2023"
+                        code-link="https://github.com/7angel4/RPC"
+                >
+                </bib-item>
+                <bib-item
+                        title="Simulated Process Manager"
+                        year="2023"
+                        code-link="https://github.com/7angel4/process-manager/"
+                >
+                </bib-item>
+                <bib-item
+                        title="PacMan in the TorusVerse: PacMan maze game with map editor"
+                        year="2023"
+                        thumbnail="assets/resources/thumbnails/pacman-thumbnail.png"
+                        code-link="https://github.com/Unimelb-SWEN30006/2023-sem1-projectassignment2-fri-13-00-team-07"
+                >
+                </bib-item>
+                <bib-item
+                        title="Classification of Goodreads Book Readings"
+                        year="2023"
+                        thumbnail="assets/resources/thumbnails/goodreads-classification-thumbnail.png"
+                        code-link="https://github.com/7angel4/COMP30027_A2/tree/main/Final"
+                >
+                </bib-item>
+                <bib-item
+                        title="Dijkstra's Flow free solver"
+                        year="2023"
+                        code-link="https://github.com/7angel4/flow-free-solver"
+                >
+                </bib-item>
+<!--                    <li>Design and implementation of a simple <a href="https://github.com/7angel4/RPC">Remote Procedural Call</a> system in C</li>-->
+<!--                    <li>Simulation of a <a href="https://github.com/7angel4/process-manager/">process manager</a> (involving scheduling & memory allocation) in C</li>-->
+<!--                    <li>Leading team development of <a href="https://github.com/Unimelb-SWEN30006/2023-sem1-projectassignment2-fri-13-00-team-07">PacMan in the TorusVerse</a>, a simple Pacman maze-->
+<!--                        game featuring a map editor in Java</li>-->
+<!--                    <li>Implementation of various supervised classifiers for <a href="https://github.com/7angel4/COMP30027_A2/tree/main/Final">prediction of book ratings on Goodreads</a>, using scikit-learn in Python</li>-->
+<!--                    <li>Implementation of a simple <a href="https://github.com/7angel4/flow-free-solver">flow-free solver</a> using Dijkstra’s algorithm</li>-->
+<!--                </ul>-->
+            </collapsible-section>
+        </section>
+    </section>
+</main>
+
+<!-- Custom footer -->
+<custom-footer></custom-footer>
+
+<script src="assets/scripts/elems.js"></script>
+</body>
+</html>

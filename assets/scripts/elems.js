@@ -6,9 +6,9 @@ class CustomNav extends HTMLElement {
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="work.html">Work Experience</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="academics.html">Academics</a></li>
                     <li><a href="education.html">Education</a></li>
+                    <li><a href="work.html">Work Experience</a></li>
                     <li><a href="miscellaneous.html">Miscellaneous</a></li>
                 </ul>
             </nav>
@@ -71,3 +71,57 @@ class CollapsibleSection extends HTMLElement {
 
 // Define the custom element
 customElements.define('collapsible-section', CollapsibleSection);
+
+class BibItem extends HTMLElement {
+    constructor() {
+        super();
+
+        // Extract attributes
+        const title = this.getAttribute('title');
+        const authors = this.getAttribute('authors');
+        const year = this.getAttribute('year');
+        const source = this.getAttribute('source');
+        const thumbnail = this.getAttribute('thumbnail');
+        const abstract = this.getAttribute('abstract');
+        const pdfLink = this.getAttribute('pdf-link');
+        const codeLink = this.getAttribute('code-link');
+        const websiteLink = this.getAttribute('website-link');
+
+        // HTML structure for the bibliography item
+        this.innerHTML = `
+            <div class="bib-item">
+                <img src="${thumbnail}" class="thumbnail" alt="${title}">
+                <div class="bib-content">
+                    <p class="title">${title}</p>
+                    <p class="authors">${authors}</p>
+                    <p class="source-year">${source}, ${year}</p>
+                    <div class="buttons">
+                        <button class="collapsible">Abstract</button>
+                        <a href="${pdfLink}" class="button" target="_blank">PDF</a>
+                        <a href="${codeLink}" class="button" target="_blank">Code</a>
+                        ${websiteLink ? `<a href="${websiteLink}" class="button" target="_blank">Website</a>` : ''}
+                    </div>
+                    <div class="abstract-content">${abstract}</div>
+                </div>
+            </div>
+        `;
+
+        // Initialize collapsible functionality
+        this.initializeCollapsible();
+    }
+
+    initializeCollapsible() {
+        const collapsibleButton = this.querySelector('.collapsible');
+        const abstractContent = this.querySelector('.abstract-content');
+
+        // Event listener for collapsible button
+        collapsibleButton.addEventListener('click', () => this.toggleAbstract(collapsibleButton, abstractContent));
+    }
+
+    toggleAbstract(button, content) {
+        content.classList.toggle('active');
+        button.textContent = content.classList.contains('active') ? 'Hide Abstract' : 'Abstract';
+    }
+}
+
+customElements.define('bib-item', BibItem);

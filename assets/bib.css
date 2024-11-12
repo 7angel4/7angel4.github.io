@@ -1,0 +1,64 @@
+.bib-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.bib-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.authors, .source-year {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.buttons {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.button, .collapsible {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+    border: none;
+    background-color: #E3CAA5;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.collapsible {
+    background-color: #A9907E;
+}
+
+.collapsible:focus, .button:focus {
+    outline: none;
+}
+
+.abstract-content {
+    display: none;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.abstract-content.active {
+    display: block;
+}
