@@ -161,3 +161,18 @@ const mt2024 = {
     ]
 };
 addTimeBlock(mt2024, "oxford-history");
+
+// Others
+const cmmrs2024 = {
+    time: 'CMMRS 2024 (Jul - Aug 2024)',
+    title: 'The Cornell, Maryland, Max Planck Pre-doctoral Research School in Computer Science',
+    subjects: []
+};
+const setac2024 = {
+    time: 'SETAC 2024 (Sep 2024)',
+    title: 'Society of Environmental Toxicology and Chemistry - SETAC Asia-Pacific 14th Biennial Meeting',
+    subjects: []
+};
+addTimeBlock(cmmrs2024, "other-history");
+addTimeBlock(setac2024, "other-history");
+

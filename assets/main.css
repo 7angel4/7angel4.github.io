@@ -54,7 +54,7 @@ nav {
     justify-content: center;
     align-items: center;
     background-color: #A9907E;
-    max-width: 70%;  /* align with .intro-text */
+    max-width: 100%;  /* align with .intro-text */
     margin-top: 2%;
 }
 
@@ -92,15 +92,18 @@ a:hover {
 
 .profile-photo img {
     position: absolute;
-    top: -13rem;
+    top: 0;
     right: 0;
 }
 
 /** Homepage intro **/
 .intro-text {
     width: 70%;
-    left: 0
+    left: 0;
+    position: relative;
+    z-index: 1;
 }
+
 
 /** Sections **/
 section {

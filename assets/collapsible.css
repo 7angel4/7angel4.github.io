@@ -6,8 +6,8 @@ collapsible-section {
 }
 
 .collapsible-button {
-    background-color: #3498db;
-    color: white;
+    background-color: #FFF4C2; /* Soft yellow tone from your palette */
+    color: #8F7A5A;
     padding: 15px;
     font-size: 18px;
     border: none;
@@ -15,10 +15,13 @@ collapsible-section {
     width: 100%;
     cursor: pointer;
     display: block;
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease;
 }
 
 .collapsible-button:hover {
-    background-color: #2980b9; /* Darker shade for hover effect */
+    background-color: #DFD3C3; /* Slightly darker yellow for hover effect */
+    border-radius: 10px; /* Keep rounded corners on hover */
 }
 
 .collapsible-content {
