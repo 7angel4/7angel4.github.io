@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academics - Angel He's Personal Website</title>
+    <title>Education - Angel He's Personal Website</title>
     <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/collapsible.css">
     <link rel="stylesheet" href="assets/timeline.css">
-    <script src="assets/scripts/update-academics.js" type="module"></script>
 </head>
 <body>
-<!-- Custom navigation bar -->
-<custom-nav></custom-nav>
-
-<!-- Main content of the page -->
+<header>
+    <h1>Education</h1>
+    <custom-nav></custom-nav>
+</header>
 <main>
-    <section id="academics">
-        <h2>Academics</h2>
-        <p>Here's a summary of the subjects I've completed so far:</p>
-        <ul id="academic-trajectory" class="timeline">
-            <!-- Academic trajectory items will be dynamically added by update-academics.js -->
-        </ul>
-    </section>
+    <collapsible-section text="University of Melbourne - Bachelor of Science">
+        <ul id="unimelb-history" class="timeline"><!-- items dynamically added by update-edu-timeline.js --></ul>
+    </collapsible-section>
+    <collapsible-section text="Carnegie Mellon University - BSc Exchange">
+        <ul id="cmu-history" class="timeline"><!-- items dynamically added by update-edu-timeline.js --></ul>
+    </collapsible-section>
+    <collapsible-section text="University of Oxford - MSc in Advanced Computer Science">
+        <ul id="oxford-history" class="timeline"><!-- items dynamically added by update-edu-timeline.js --></ul>
+    </collapsible-section>
 </main>
 
 <!-- Custom footer -->
 <custom-footer></custom-footer>
 
+<!-- Load elems.js first (defines custom elements like collapsible-section) -->
 <script src="assets/scripts/elems.js"></script>
+
+<!-- Then load update-edu-timeline.js (relies on elems.js) -->
+<script src="assets/scripts/update-edu-timeline.js" type="module"></script>
 </body>
 </html>

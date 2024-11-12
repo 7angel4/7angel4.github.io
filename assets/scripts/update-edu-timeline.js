@@ -1,12 +1,34 @@
-const TIMELINE_ELEM = document.getElementById("academic-trajectory");
-const COLORS = ["#8D7B68", "#AD8B73", "#A4907C", "#CEAB93", "#C8B6A6", "#E3CAA5", "#DFD3C3", "#FFEBC1"];
+const COLORS = [
+    "#8D7B68",
+    "#AD8B73",
+    "#A4907C",
+    "#CEAB93",
+    "#C8B6A6",
+    "#E3CAA5",
+    "#DFD3C3",
+    "#FFEBC1",
+    "#B38B6D",
+    "#D6A77A",
+    "#B1A58D",
+    "#D2C6A1",
+    "#C0A78B",
+    "#D8C6A1",
+    "#C9B8A5",
+    "#F1E0C6"
+];
 let colorIndex = 0;
 
-function addTimeBlock(academicPeriod) {
-    addTimeBlockFromData(academicPeriod.time, academicPeriod.title, academicPeriod.subjects);
+function addTimeBlock(academicPeriod, timelineElemId) {
+    const timelineElem = document.getElementById(timelineElemId);
+    addTimeBlockFromData(academicPeriod.time, academicPeriod.title, academicPeriod.subjects, timelineElem);
+    // After appending items dynamically
+    const timelineContainer = document.getElementById('unimelb-history');
+    timelineContainer.style.display = 'none'; // Temporarily hide the timeline
+    timelineContainer.offsetHeight; // Trigger reflow
+    timelineContainer.style.display = ''; // Show the timeline again
 }
 
-function addTimeBlockFromData(time, title, subjects) {
+function addTimeBlockFromData(time, title, subjects, timelineElem) {
     const timeBlockLi = document.createElement('li');
     timeBlockLi.style.setProperty("--accent-color", COLORS[colorIndex++]);
     let dateDiv = createTimeBlockDiv('time', time);
@@ -25,7 +47,7 @@ function addTimeBlockFromData(time, title, subjects) {
     timeBlockLi.appendChild(dateDiv);
     timeBlockLi.appendChild(titleDiv);
     timeBlockLi.appendChild(subjectsDiv);
-    TIMELINE_ELEM.appendChild(timeBlockLi);
+    timelineElem.appendChild(timeBlockLi);
 }
 
 function createTimeBlockDiv(className, text) {
@@ -103,10 +125,39 @@ const semTwo2023 = {
     ]
 };
 
-addTimeBlock(umep2021);
-addTimeBlock(summer2022);
-addTimeBlock(semOne2022);
-addTimeBlock(semTwo2022);
-addTimeBlock(summer2023);
-addTimeBlock(semOne2023);
-addTimeBlock(semTwo2023);
+
+// Unimelb
+addTimeBlock(umep2021, "unimelb-history");
+addTimeBlock(summer2022, "unimelb-history");
+addTimeBlock(semOne2022, "unimelb-history");
+addTimeBlock(semTwo2022, "unimelb-history");
+addTimeBlock(summer2023, "unimelb-history");
+addTimeBlock(semOne2023, "unimelb-history");
+addTimeBlock(semTwo2023, "unimelb-history");
+
+// CMU
+const springSem2024 = {
+    time: '2024 Spring Sem',
+    title: 'Final sem of BSc - on exchange!',
+    subjects: [
+        '10-422, Foundations of Learning & Game Theory',
+        '15-322, Intro. to Computer Music',
+        '15-451, Algorithms Design & Analysis',
+        '16-224, IDeATe: Re-Crafting Computational Thinking with Soft Technologies',
+        '94-413, Project Management'
+    ]
+};
+addTimeBlock(springSem2024, "cmu-history");
+
+// Oxford
+const mt2024 = {
+    time: '2024 Michaelmas Term',
+    title: 'First sem at Oxford (& in UK)!',
+    subjects: [
+        'Bayesian Statistical Probabilistic Programming',
+        'Computer-Aided Formal Verification',
+        'Concurrent Algorithms & Data Structures',
+        'Graph Representation Learning'
+    ]
+};
+addTimeBlock(mt2024, "oxford-history");

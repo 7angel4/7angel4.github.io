@@ -1,0 +1,41 @@
+/* Collapsible Section Styling */
+collapsible-section {
+    display: block;
+    margin: 1rem 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.collapsible-button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+.collapsible-button:hover {
+    background-color: #2980b9; /* Darker shade for hover effect */
+}
+
+.collapsible-content {
+    display: none;
+    padding-left: 20px;
+    margin-top: 10px;
+    list-style-type: inside;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+}
+
+.collapsible-content li {
+    margin-bottom: 8px; /* Space between list items */
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.collapsible-content li:hover {
+    text-decoration: underline; /* Underline list items on hover */
+}
