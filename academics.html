@@ -15,8 +15,15 @@
             margin-bottom: 2rem
         }
 
-        h2 {
+        #research {
+            display: block;
+            margin: 1rem 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        #research h2 {
             background-color: #FFF4C2; /* Soft yellow tone from your palette */
+            margin-top: 0;
             margin-bottom: 2rem;
             color: #8F7A5A;
             padding: 15px;
@@ -27,6 +34,14 @@
             width: 100%;
             display: block;
             border-radius: 10px;
+        }
+
+        #research-content {
+            padding-left: 20px;
+            margin-top: 10px;
+            list-style-type: inside;
+            font-size: 1.1rem;
+            line-height: 1.7rem;
         }
     </style>
 </head>
@@ -41,7 +56,7 @@
 <main>
     <section id="research">
         <h2>Research</h2>
-        <section id="bibliography">
+        <div id="research-content">  <!-- mimic collapsible-content style -->
             <bib-item
                     title="All In: Give me your money!"
                     authors="Angel Y. He, Mark Holmes"
@@ -93,53 +108,53 @@
                     code-link="https://github.com/7angel4/3-person-betting-game"
             >
             </bib-item>
-        </section>
-        <section id="other-projects">
-            <collapsible-section text="Other projects I've worked on">
-                <bib-item
-                        title="PlaniWiki: Educational Website for Planimation"
-                        year="2023"
-                        thumbnail="assets/resources/thumbnails/planiwiki-thumbnail.png"
-                        code-link="https://github.com/planimation/documentation"
-                >
-                </bib-item>
-                <bib-item
-                        title="Simple RPC Server"
-                        year="2023"
-                        thumbnail="assets/resources/thumbnails/rpc-thumbnail.png"
-                        code-link="https://github.com/7angel4/RPC"
-                >
-                </bib-item>
-                <bib-item
-                        title="Simulated Process Manager: Scheduler + Memory Allocator"
-                        year="2023"
-                        thumbnail="assets/resources/thumbnails/flow-free-thumbnail.png"
-                        code-link="https://github.com/7angel4/process-manager/"
-                >
-                </bib-item>
-                <bib-item
-                        title="PacMan in the TorusVerse: PacMan maze game with map editor"
-                        year="2023"
-                        thumbnail="assets/resources/thumbnails/pacman-thumbnail.png"
-                        code-link="https://github.com/Unimelb-SWEN30006/2023-sem1-projectassignment2-fri-13-00-team-07"
-                >
-                </bib-item>
-                <bib-item
-                        title="Classification of Goodreads Book Readings"
-                        year="2023"
-                        thumbnail="assets/resources/thumbnails/goodreads-classification-thumbnail.png"
-                        code-link="https://github.com/7angel4/COMP30027_A2/tree/main/Final"
-                >
-                </bib-item>
-                <bib-item
-                        title="Dijkstra's Flow free solver"
-                        year="2023"
-                        thumbnail="assets/resources/thumbnails/flow-free-thumbnail.png"
-                        code-link="https://github.com/7angel4/flow-free-solver"
-                >
-                </bib-item>
-            </collapsible-section>
-        </section>
+        </div>
+    </section>
+    <section id="other-projects">
+        <collapsible-section text="Other projects I've worked on">
+            <bib-item
+                    title="PlaniWiki: Educational Website for Planimation"
+                    year="2023"
+                    thumbnail="assets/resources/thumbnails/planiwiki-thumbnail.png"
+                    code-link="https://github.com/planimation/documentation"
+            >
+            </bib-item>
+            <bib-item
+                    title="Simple RPC Server"
+                    year="2023"
+                    thumbnail="assets/resources/thumbnails/rpc-thumbnail.png"
+                    code-link="https://github.com/7angel4/RPC"
+            >
+            </bib-item>
+            <bib-item
+                    title="Simulated Process Manager: Scheduler + Memory Allocator"
+                    year="2023"
+                    thumbnail="assets/resources/thumbnails/flow-free-thumbnail.png"
+                    code-link="https://github.com/7angel4/process-manager/"
+            >
+            </bib-item>
+            <bib-item
+                    title="PacMan in the TorusVerse: PacMan maze game with map editor"
+                    year="2023"
+                    thumbnail="assets/resources/thumbnails/pacman-thumbnail.png"
+                    code-link="https://github.com/Unimelb-SWEN30006/2023-sem1-projectassignment2-fri-13-00-team-07"
+            >
+            </bib-item>
+            <bib-item
+                    title="Classification of Goodreads Book Readings"
+                    year="2023"
+                    thumbnail="assets/resources/thumbnails/goodreads-classification-thumbnail.png"
+                    code-link="https://github.com/7angel4/COMP30027_A2/tree/main/Final"
+            >
+            </bib-item>
+            <bib-item
+                    title="Dijkstra's Flow free solver"
+                    year="2023"
+                    thumbnail="assets/resources/thumbnails/flow-free-thumbnail.png"
+                    code-link="https://github.com/7angel4/flow-free-solver"
+            >
+            </bib-item>
+        </collapsible-section>
     </section>
 </main>
 
