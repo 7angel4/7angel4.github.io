@@ -43,6 +43,36 @@
             font-size: 1.1rem;
             line-height: 1.7rem;
         }
+
+        #teaching p,
+        #teaching li {
+            background-color: transparent;
+            margin-bottom: 0; /* Space between list items */
+            padding: 5px;
+        }
+
+        .teaching-list {
+            list-style-type: none;  /* Remove default list styling */
+            padding: 0;             /* Remove default padding */
+        }
+
+        .teaching-list li {
+            line-height: 1.6rem;  /* Adds spacing between lines */
+            margin-bottom: 1rem;  /* Adds space between list items */
+        }
+
+        .teaching-list .course-code {
+            font-weight: bold;  /* Makes the course code bold */
+        }
+
+        .teaching-list .course-name {
+            font-style: italic;  /* Optionally, italicize the course name */
+        }
+
+        .teaching-list .institution {
+            color: #8F7A5A;      /* Optional: give a subtle color to the institution */
+            font-size: 0.9rem;   /* Slightly smaller text for the institution */
+        }
     </style>
 </head>
 <body>
@@ -154,6 +184,27 @@
                     code-link="https://github.com/7angel4/flow-free-solver"
             >
             </bib-item>
+        </collapsible-section>
+    </section>
+    <section id="teaching">
+        <collapsible-section text="Teaching">
+            <ul class="teaching-list">
+                <li>
+                    <span class="course-code"><a href="https://handbook.unimelb.edu.au/2023/subjects/comp20003">COMP20003</a></span>,
+                    <span class="course-name">Algorithms & Data Structures </span>
+                    <span class="institution">@ University of Melbourne</span>
+                </li>
+                <li>
+                    <span class="course-code"><a href="https://handbook.unimelb.edu.au/2023/subjects/comp20005">COMP20005</a></span>,
+                    <span class="course-name">Intro. to Numerical Computation in C (past: Engineering Computation) </span>
+                    <span class="institution">@ University of Melbourne</span>
+                </li>
+                <li>
+                    <span class="course-code"><a href="https://handbook.unimelb.edu.au/2023/subjects/comp10002">COMP10002</a></span>,
+                    <span class="course-name">Foundations of Algorithms </span>
+                    <span class="institution">@ University of Melbourne</span>
+                </li>
+            </ul>
         </collapsible-section>
     </section>
 </main>
