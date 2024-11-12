@@ -6,73 +6,37 @@
     <title>Angel He's personal website</title>
     <link rel="stylesheet" href="assets/main.css">
     <link rel="stylesheet" href="assets/timeline.css">
-    <script src="assets/scripts/update-academics.js" type="module"></script>
+    <script src="assets/scripts/elems.js" type="module"></script>
 </head>
 <body>
     <header>
         <h1>Hiiiiii! It's Angel here! 😇</h1>
-        <nav>
-            <ul>
-                <li><a href="#teaching">Teaching</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#academics">Academics</a></li>
-                <li><a href="#miscellaneous">Miscellaneous</a></li>
-            </ul>
-        </nav>
+        <custom-nav></custom-nav>
     </header>
 
     <main>
-        <div class="profile-photo">
-            <img src="assets/resources/Photograph-AYH.png" width="20%"/>
+        <div class="profile-container">
+            <div class="profile-photo">
+                <img src="assets/resources/Photograph-AYH.png" width="25%" alt="Angel's Photo"/>
+            </div>
+            <div class="intro-text">
+                <p>
+                    I'm Angel Y. He, a recent Computer Science graduate.
+                    I did my Bachelor of Science (majoring in Computing and Software Systems)
+                    at the University of Melbourne, and I'm currently doing the MSc in Advanced Computer Science
+                    at the University of Oxford.
+                    <br><br>
+                    I am primarily interested in the intersection of <b>optimisation</b> (in a theoretical sense) and
+                    <b>probabilistic/statistical programming and analysis</b> (especially <b>stochastic processes</b>!).
+                    I've worked on projects spanning from theoretical proofs to distributed systems,
+                    and I'm deeply motivated by the untapped potentials of probability in computer science!
+                    <br><br>
+                    Here, you’ll find more about my academic journey, projects I've done, and work experiences.
+                </p>
+            </div>
         </div>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Here are some of the projects I've worked on:</p>
-            <ul>
-                <li>Hitting probability solver for <a href=https://github.com/7angel4/3-person-betting-game>3-player betting games</a></li>
-                <li>Team development of <a href="https://planiwiki.planning.domains/">Planiwiki</a> for the <a href="https://github.com/planimation/documentation">Planimation</a> project
-                    <ul>
-                        <li>Authored the animation profile for the <a href="https://github.com/planimation/documentation/tree/master/AnimationProfiles/Elevators">Elevators</a> domain</li>
-                        <li>Lead front-end developer & Chief client communicator</li>
-                    </ul>
-                </li>
-                <li>Design and implementation of a simple <a href="https://github.com/7angel4/RPC">Remote Procedural Call</a> system in C</li>
-                <li>Simulation of a <a href="https://github.com/7angel4/process-manager/">process manager</a> (involving scheduling & memory allocation) in C</li>
-                <li>Leading team development of <a href="https://github.com/Unimelb-SWEN30006/2023-sem1-projectassignment2-fri-13-00-team-07">PacMan in the TorusVerse</a>, a simple Pacman maze
-                    game featuring a map editor in Java</li>
-                <li>Implementation of various supervised classifiers for <a href="https://github.com/7angel4/COMP30027_A2/tree/main/Final">prediction of book ratings on Goodreads</a>, using scikit-learn in Python</li>
-                <li>Implementation of a simple <a href="https://github.com/7angel4/flow-free-solver">flow-free solver</a> using Dijkstra’s algorithm</li>
-            </ul>
-        </section>
-
-        <section id="teaching">
-            <h2>Teaching</h2>
-            <p>I began working at the University of Melbourne as an academic tutor in 2023!</p>
-            <p>Subjects:</p>
-            <ul>
-                <li>COMP20003, Algorithms & Data Structures</li>
-                <li>COMP20005, Intro. to Numerical Computation in C</li>
-                <li>COMP10002, Foundations of Algorithms</li>
-            </ul>
-        </section>
-
-        <section id="academics">
-            <h2>Academics</h2>
-            <p>Here's a summary of the subjects I've completed so far:</p>
-            <ul id="academic-trajectory" class="timeline">
-            </ul>
-        </section>
-
-        <section id="miscellaneous">
-            <h2>Miscellaneous</h2>
-            <p>Looks like I'm an <a href="https://www.16personalities.com/istj-personality">ISTJ</a>? 🤔</p>
-            <img src="assets/resources/ISTJ-A.png" width="20%"/>
-        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 <a href="https://github.com/7angel4">@7angel4</a></p>
-    </footer>
+    <custom-footer></custom-footer>
 </body>
 </html>

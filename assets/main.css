@@ -14,12 +14,19 @@ body {
     background-color: #F8EDE3;
     min-height: 100vh;
     display: grid;
-    align-content: center;
+    align-content: flex-start; /* aligns content to the top */
     gap: 2rem;
     padding: 2rem;
     margin: 1.5rem 2rem;
     font-family: 'Inter', sans-serif;
 }
+
+header {
+    margin: 0; /* no margin applied to the header */
+    padding: 0; /* no padding applied to the header */
+    width: 100%; /* header spans full width */
+}
+
 
 h1 {
     text-align: left;
@@ -41,13 +48,13 @@ ul li li {
     margin-left: 2rem;
 }
 
-/* Nav bar */
+/** Nav bar **/
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #A9907E;
-    max-width: 50%;
+    max-width: 70%;  /* align with .intro-text */
     margin-top: 2%;
 }
 
@@ -89,6 +96,12 @@ a:hover {
     right: 0;
 }
 
+/** Homepage intro **/
+.intro-text {
+    width: 70%;
+    left: 0
+}
+
 /** Sections **/
 section {
     margin-top: 2rem;
@@ -103,7 +116,7 @@ h2 {
 }
 
 p {
-    line-height: 2rem;
+    line-height: 1.7rem; /* paragraphs line spacing */
 }
 
 /** Footer **/
