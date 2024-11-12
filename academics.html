@@ -5,9 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Angel He's Personal Website</title>
     <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="assets/collapsible.css">
     <link rel="stylesheet" href="assets/bib.css">
     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?...">
     </script>
+    <style>
+        .collapsible-button {
+            background-color: #FFF4C2;
+            margin-bottom: 2rem
+        }
+
+        h2 {
+            background-color: #FFF4C2; /* Soft yellow tone from your palette */
+            margin-bottom: 2rem;
+            color: #8F7A5A;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            text-align: left;
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
 <!-- Custom navigation bar -->
@@ -73,8 +94,8 @@
             >
             </bib-item>
         </section>
-        <section>
-            <collapsible-section text="Other projects I've worked on:">
+        <section id="other-projects">
+            <collapsible-section text="Other projects I've worked on">
                 <bib-item
                         title="PlaniWiki: Educational Website for Planimation"
                         year="2023"

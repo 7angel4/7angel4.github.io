@@ -6,17 +6,29 @@ collapsible-section {
 }
 
 .collapsible-button {
-    background-color: #FFF4C2; /* Soft yellow tone from your palette */
+    background-color: #FFF6E3; /* Soft yellow tone from your palette */
     color: #8F7A5A;
     padding: 15px;
     font-size: 18px;
+    font-weight: bold;
     border: none;
     text-align: left;
     width: 100%;
     cursor: pointer;
     display: block;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
     transition: background-color 0.3s ease;
+    position: relative; /* Enable positioning for arrow */
+}
+
+.collapsible-button::after {
+    content: "▼"; /* Down arrow symbol */
+    font-size: 12px; /* Adjust arrow size */
+    color: #8F7A5A; /* Arrow color matching text */
+    position: absolute;
+    right: 15px; /* Space between arrow and edge */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .collapsible-button:hover {

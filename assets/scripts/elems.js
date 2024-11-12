@@ -90,24 +90,26 @@ class BibItem extends HTMLElement {
         // HTML structure for the bibliography item
         this.innerHTML = `
             <div class="bib-item">
-                <img src="${thumbnail}" class="thumbnail" alt="${title}">
+                ${thumbnail ? `<img src="${thumbnail}" class="thumbnail" alt="${title}">` : ''}
                 <div class="bib-content">
                     <p class="title">${title}</p>
-                    <p class="authors">${authors}</p>
-                    <p class="source-year">${source}, ${year}</p>
+                    ${authors ? `<p class="authors">${authors}</p>` : ''}
+                    ${source && year ? `<p class="source-year">${source}, ${year}</p>` : ''}
                     <div class="buttons">
-                        <button class="collapsible">Abstract</button>
-                        <a href="${pdfLink}" class="button" target="_blank">PDF</a>
-                        <a href="${codeLink}" class="button" target="_blank">Code</a>
+                        ${abstract ? `<button class="collapsible">Abstract</button>` : ''}
+                        ${pdfLink ? `<a href="${pdfLink}" class="button" target="_blank">PDF</a>` : ''}
+                        ${codeLink ? `<a href="${codeLink}" class="button" target="_blank">Code</a>` : ''}
                         ${websiteLink ? `<a href="${websiteLink}" class="button" target="_blank">Website</a>` : ''}
                     </div>
-                    <div class="abstract-content">${abstract}</div>
+                    ${abstract ? `<div class="abstract-content">${abstract}</div>` : ''}
                 </div>
             </div>
         `;
 
-        // Initialize collapsible functionality
-        this.initializeCollapsible();
+        // Initialize collapsible functionality if abstract is provided
+        if (abstract) {
+            this.initializeCollapsible();
+        }
     }
 
     initializeCollapsible() {

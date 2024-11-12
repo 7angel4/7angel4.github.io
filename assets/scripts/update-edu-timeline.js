@@ -57,6 +57,35 @@ function createTimeBlockDiv(className, text) {
     return div;
 }
 
+
+// Oxford
+const mt2024 = {
+    time: '2024 Michaelmas Term',
+    title: 'First sem at Oxford (& in UK)!',
+    subjects: [
+        'Bayesian Statistical Probabilistic Programming',
+        'Computer-Aided Formal Verification',
+        'Concurrent Algorithms & Data Structures',
+        'Graph Representation Learning'
+    ]
+};
+addTimeBlock(mt2024, "oxford-history");
+
+// CMU
+const springSem2024 = {
+    time: '2024 Spring Sem',
+    title: 'Final sem of BSc - on exchange!',
+    subjects: [
+        '10-422, Foundations of Learning & Game Theory',
+        '15-322, Intro. to Computer Music',
+        '15-451, Algorithms Design & Analysis',
+        '16-224, IDeATe: Re-Crafting Computational Thinking with Soft Technologies',
+        '94-413, Project Management'
+    ]
+};
+addTimeBlock(springSem2024, "cmu-history");
+
+
 const umep2021 = {
     time: '2021',
     title: "UMEP Maths at Yr12 (still a high school kid)",
@@ -134,33 +163,6 @@ addTimeBlock(semTwo2022, "unimelb-history");
 addTimeBlock(summer2023, "unimelb-history");
 addTimeBlock(semOne2023, "unimelb-history");
 addTimeBlock(semTwo2023, "unimelb-history");
-
-// CMU
-const springSem2024 = {
-    time: '2024 Spring Sem',
-    title: 'Final sem of BSc - on exchange!',
-    subjects: [
-        '10-422, Foundations of Learning & Game Theory',
-        '15-322, Intro. to Computer Music',
-        '15-451, Algorithms Design & Analysis',
-        '16-224, IDeATe: Re-Crafting Computational Thinking with Soft Technologies',
-        '94-413, Project Management'
-    ]
-};
-addTimeBlock(springSem2024, "cmu-history");
-
-// Oxford
-const mt2024 = {
-    time: '2024 Michaelmas Term',
-    title: 'First sem at Oxford (& in UK)!',
-    subjects: [
-        'Bayesian Statistical Probabilistic Programming',
-        'Computer-Aided Formal Verification',
-        'Concurrent Algorithms & Data Structures',
-        'Graph Representation Learning'
-    ]
-};
-addTimeBlock(mt2024, "oxford-history");
 
 // Others
 const cmmrs2024 = {
