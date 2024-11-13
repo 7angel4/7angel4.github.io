@@ -1,13 +1,16 @@
 .bib-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center; /* thumbnail position is vertically centered */
     margin-bottom: 2rem;
+    background-color: #fffbe9; /* Shallow background color for each bib-item */
+    padding: 1rem; /* Add some padding for visual spacing */
+    border-radius: 8px; /* Optional: rounded corners for each item */
 }
 
 .thumbnail {
     width: 100px;
     height: 100px;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     border-radius: 8px;
     object-fit: cover;
 }
@@ -33,9 +36,10 @@
     gap: 0.5rem;
 }
 
+/* controls pdf & code buttons */
 .button, .collapsible {
     font-size: 0.9rem;
-    padding: 0.3rem 0.6rem;
+    padding: 0.2rem 0.6rem;
     border: none;
     background-color: #E3CAA5;
     color: white;
@@ -44,6 +48,7 @@
     text-decoration: none;
 }
 
+/* controls abstract button */
 .collapsible {
     background-color: #A9907E;
 }

@@ -9,28 +9,27 @@
     font-family: 'Inter', sans-serif;
 }
 
-#research h2 {
-    background-color: #FFF4C2; /* Soft yellow tone from your palette */
-    margin-top: 0;
-    margin-bottom: 2rem;
-    color: #7b694e;  /* matches collapsible.css: .collapsible-button */
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    text-align: left;
-    width: 100%;
-    display: block;
-    border-radius: 10px;
-}
-
 #research-content {
-    padding-left: 20px;
-    margin-top: 10px;
+    margin: 0 20px 0 20px;
     list-style-type: inside;
     font-size: 1.1rem;
     line-height: 1.7rem;
 }
+
+#research, #projects {
+    margin-bottom: 2rem;
+}
+
+#research h2, #projects h2 {
+    background-color: #FFF4C2;
+    color: #7b694e;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.5rem;  /* emphasis on research */
+    font-weight: bold;
+    margin-bottom: 1rem; /* Adds space below header */
+}
+
 
 #teaching p,
 #teaching li {
