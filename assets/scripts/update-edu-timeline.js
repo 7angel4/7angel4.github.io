@@ -57,19 +57,23 @@ function createTimeBlockDiv(className, text) {
     return div;
 }
 
+const addTimeBlocks = (academicPeriods, timelineElemId) => academicPeriods.forEach(p => addTimeBlock(p, timelineElemId))
+
 
 // Oxford
-const mt2024 = {
-    time: '2024 Michaelmas Term',
-    title: 'First sem at Oxford (& in UK)!',
-    subjects: [
-        'Bayesian Statistical Probabilistic Programming',
-        'Computer-Aided Formal Verification',
-        'Concurrent Algorithms & Data Structures',
-        'Graph Representation Learning'
-    ]
-};
-addTimeBlock(mt2024, "oxford-history");
+const oxford = [
+    {
+        time: '2024 Michaelmas Term',
+        title: 'First sem at Oxford (& in UK)!',
+        subjects: [
+            'Bayesian Statistical Probabilistic Programming',
+            'Computer-Aided Formal Verification',
+            'Concurrent Algorithms & Data Structures',
+            'Graph Representation Learning'
+        ]
+    }
+    ];
+addTimeBlocks(oxford, "oxford-history");
 
 // CMU
 const springSem2024 = {
@@ -82,99 +86,95 @@ const springSem2024 = {
         '16-224, IDeATe: Re-Crafting Computational Thinking with Soft Technologies',
         '94-413, Project Management'
     ]
-};
+}
 addTimeBlock(springSem2024, "cmu-history");
 
 
-const umep2021 = {
-    time: '2021',
-    title: "UMEP Maths at Yr12 (still a high school kid)",
-    subjects: [
-        'MAST10018, Linear Algebra Extension Studies',
-        'MAST10019, Calculus Extension Studies'
+const unimelb = [
+    {
+        time: '2021',
+        title: "UMEP Maths at Yr12 (still a high school kid)",
+        subjects: [
+            'MAST10018, Linear Algebra Extension Studies',
+            'MAST10019, Calculus Extension Studies'
     ]
-};
-
-const summer2022 = {
-    time: '2022 Summer',
-    title: "Intro to CS!",
-    subjects: ['COMP10001, Foundations of Computing']
-};
-
-const semOne2022 = {
-    time: '2022 Sem 1',
-    title: 'First formal semester at UoM!',
-    subjects: [
-        'COMP10002, Foundations of Algorithms',
-        'ENVS10006, Mapping Environments',
-        'MAST20004, Probability',
-        "SCIE10005, Today's Science, Tomorrow's World"
-    ]
-};
-
-const semTwo2022 = {
-    time: '2022 Sem 2',
-    title: "Second year disguised as first year...",
-    subjects: [
-        'COMP20003, Algorithms and Data Structures',
-        'COMP20008, Elements of Data Processing',
-        'INFO20003, Database Systems',
-        'SWEN20003, Object Oriented Software Development'
-    ]
-};
-
-const summer2023 = {
-    time: '2023 Summer',
-    title: 'Intensive summer!',
-    subjects: [
-        'FNCE10002, Principles of Finance',
-        'MAST20005, Statistics'
-    ]
-};
-
-const semOne2023 = {
-    time: '2023 Sem 1',
-    title: "Teaching begins!",
-    subjects: [
-        'COMP30023, Computer Systems',
-        'COMP30027, Machine Learning',
-        'MAST30025, Linear Statistical Models',
-        'SWEN30006, Software Modelling and Design'
-    ]
-}
-
-const semTwo2023 = {
-    time: '2023 Sem 2',
-    title: 'Final sem at UoM...',
-    subjects: [
-        'COMP30022, IT Project',
-        'COMP30026, Models of Computation',
-        'MAST30001, Stochastic Modelling',
-        'MAST30027, Modern Applied Statistics'
-    ]
-};
+    },
+    {
+        time: '2022 Summer',
+        title: "Intro to CS!",
+        subjects: ['COMP10001, Foundations of Computing']
+    },
+    {
+        time: '2022 Sem 1',
+        title: 'First formal semester at UoM!',
+        subjects: [
+            'COMP10002, Foundations of Algorithms',
+            'ENVS10006, Mapping Environments',
+            'MAST20004, Probability',
+            "SCIE10005, Today's Science, Tomorrow's World"
+        ]
+    },
+    {
+        time: '2022 Sem 2',
+        title: "Second year disguised as first year...",
+        subjects: [
+            'COMP20003, Algorithms and Data Structures',
+            'COMP20008, Elements of Data Processing',
+            'INFO20003, Database Systems',
+            'SWEN20003, Object Oriented Software Development'
+        ]
+    },
+    {
+        time: '2023 Summer',
+        title: 'Intensive summer!',
+        subjects: [
+            'FNCE10002, Principles of Finance',
+            'MAST20005, Statistics'
+        ]
+    },
+    {
+        time: '2023 Sem 1',
+        title: "Teaching begins!",
+        subjects: [
+            'COMP30023, Computer Systems',
+            'COMP30027, Machine Learning',
+            'MAST30025, Linear Statistical Models',
+            'SWEN30006, Software Modelling and Design'
+        ]
+    },
+    {
+        time: '2023 Sem 2',
+        title: 'Final sem at UoM...',
+        subjects: [
+            'COMP30022, IT Project',
+            'COMP30026, Models of Computation',
+            'MAST30001, Stochastic Modelling',
+            'MAST30027, Modern Applied Statistics'
+        ]
+    }
+];
 
 
 // Unimelb
-addTimeBlock(umep2021, "unimelb-history");
-addTimeBlock(summer2022, "unimelb-history");
-addTimeBlock(semOne2022, "unimelb-history");
-addTimeBlock(semTwo2022, "unimelb-history");
-addTimeBlock(summer2023, "unimelb-history");
-addTimeBlock(semOne2023, "unimelb-history");
-addTimeBlock(semTwo2023, "unimelb-history");
+addTimeBlocks(unimelb, "unimelb-history");
 
 // Others
-const cmmrs2024 = {
-    time: 'CMMRS 2024 (Jul &ndash; Aug 2024)',
-    title: 'The Cornell, Maryland, Max Planck Pre-doctoral Research School in Computer Science',
-    subjects: []
-};
-const setac2024 = {
-    time: 'SETAC 2024 (Sep 2024)',
-    title: 'Society of Environmental Toxicology and Chemistry &ndash; SETAC Asia-Pacific 14th Biennial Meeting',
-    subjects: []
-};
-addTimeBlock(cmmrs2024, "other-history");
-addTimeBlock(setac2024, "other-history");
+const otherPrograms = [
+    {
+        time: 'Unimelb KLD (2021)',
+        title: 'Kwong Lee Dow Young Scholars Program',
+        subjects: []
+    },
+    {
+        time: 'CMMRS 2024 (Jul &ndash; Aug 2024)',
+        title: 'The Cornell, Maryland, Max Planck Pre-doctoral Research School in Computer Science',
+        subjects: []
+    },
+    {
+        time: 'SETAC 2024 (Sep 2024)',
+        title: 'Society of Environmental Toxicology and Chemistry &ndash; SETAC Asia-Pacific 14th Biennial Meeting',
+        subjects: []
+    }
+]
+addTimeBlocks(otherPrograms, "other-history");
 

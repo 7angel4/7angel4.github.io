@@ -6,7 +6,7 @@ class CustomNav extends HTMLElement {
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="academics.html">Academic Work</a></li>
                     <li><a href="education.html">Education</a></li>
                     <li><a href="miscellaneous.html">Miscellaneous</a></li>
                 </ul>
