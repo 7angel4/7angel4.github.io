@@ -49,29 +49,47 @@ ul li li {
 }
 
 /** Nav bar **/
+/* Fixed Navbar Styling */
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #A9907E;
-    max-width: 100%;  /* align with .intro-text */
-    margin-top: 2%;
+    background-color: #FEFAE0;
+    padding: 10px 0;
+    z-index: 1000; /* Ensures navbar stays on top */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for definition */
 }
 
 nav > ul {
     display: flex;
     gap: 100px; /* Adjusts spacing between each list item */
+    margin: 0;
+    padding: 0;
 }
 
 nav > ul > li {
     list-style-type: none;
-    padding: 5px 10px; /* Adjust padding as needed */
-    color: white;
     font-size: 1.2rem;
 }
 
 nav > ul > li > a {
-    color: white;
+    color: #7d5d3d;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: color 0.3s;
+}
+
+nav > ul > li > a:hover {
+    color: #B99470; /* Optional hover color */
+}
+
+/* Add padding to body to prevent content from hiding under the navbar */
+body {
+    padding-top: 80px; /* Adjust based on navbar height */
 }
 
 /** Hyperlinks **/
@@ -130,31 +148,31 @@ footer {
     position: fixed;
     bottom: 0;
     right: 0;
-    margin: 1rem;
-}
-
-footer {
+    width: 100%; /* Ensures it spans the full width of the page */
+    padding: 13px 30px; /* Increased padding for a larger footer */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    background-color: #FEFAE0; /* Optional background color */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
 }
 
 .footer-icons {
     display: flex;
-    gap: 15px;
+    gap: 20px; /* Increases space between icons */
 }
 
 .footer-icons a {
-    color: #333; /* Adjust to match your site's color scheme */
-    font-size: 1.2rem;
+    color: #333; /* Footer icon color */
+    font-size: 1.4rem; /* Slightly larger font size for icons */
     text-decoration: none;
 }
 
 .footer-icons a:hover {
-    color: #006BC8; /* Optional hover color for icons */
+    color: #006BC8; /* Hover color for icons */
 }
 
 footer p {
-    margin-right: 20px; /* Adds space to the left of the text */
+    margin-right: 30px; /* Adjusts space from text to icons */
+    font-size: 1rem; /* no increase in font size */
 }
