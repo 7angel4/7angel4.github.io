@@ -15,6 +15,9 @@ class CustomNav extends HTMLElement {
     }
 }
 
+// Register custom element
+customElements.define('custom-nav', CustomNav);
+
 class CustomFooter extends HTMLElement {
     constructor() {
         super();
@@ -38,8 +41,6 @@ class CustomFooter extends HTMLElement {
     }
 }
 
-// Register custom elements
-customElements.define('custom-nav', CustomNav);
 customElements.define('custom-footer', CustomFooter);
 
 class CollapsibleSection extends HTMLElement {

@@ -8,73 +8,8 @@
     <link rel="stylesheet" href="assets/main.css">
     <link rel="stylesheet" href="assets/collapsible.css">
     <link rel="stylesheet" href="assets/bib.css">
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?...">
-    </script>
-    <style>
-        .collapsible-button {
-            background-color: #FFF4C2;
-            margin-bottom: 2rem
-        }
-
-        #research {
-            display: block;
-            margin: 1rem 0;
-            font-family: 'Inter', sans-serif;
-        }
-
-        #research h2 {
-            background-color: #FFF4C2; /* Soft yellow tone from your palette */
-            margin-top: 0;
-            margin-bottom: 2rem;
-            color: #7b694e;  /* matches collapsible.css: .collapsible-button */
-            padding: 15px;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            text-align: left;
-            width: 100%;
-            display: block;
-            border-radius: 10px;
-        }
-
-        #research-content {
-            padding-left: 20px;
-            margin-top: 10px;
-            list-style-type: inside;
-            font-size: 1.1rem;
-            line-height: 1.7rem;
-        }
-
-        #teaching p,
-        #teaching li {
-            background-color: transparent;
-            margin-bottom: 0; /* Space between list items */
-            padding: 5px;
-        }
-
-        .teaching-list {
-            list-style-type: none;  /* Remove default list styling */
-            padding: 0;             /* Remove default padding */
-        }
-
-        .teaching-list li {
-            line-height: 1.6rem;  /* Adds spacing between lines */
-            margin-bottom: 1rem;  /* Adds space between list items */
-        }
-
-        .teaching-list .course-code {
-            font-weight: bold;  /* Makes the course code bold */
-        }
-
-        .teaching-list .course-name {
-            font-style: italic;  /* Optionally, italicize the course name */
-        }
-
-        .teaching-list .institution {
-            color: #8F7A5A;      /* Optional: give a subtle color to the institution */
-            font-size: 0.9rem;   /* Slightly smaller text for the institution */
-        }
-    </style>
+    <link rel="stylesheet" href="assets/academics.css">
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?..."></script>
 </head>
 <body>
 <header>
@@ -207,7 +142,11 @@
             </ul>
         </collapsible-section>
     </section>
-    <section id="Scholarships & Awards">
+    <section id="scholarships-awards">
+        <collapsible-section text="Scholarships & Awards">
+            <div id="honours-list"></div>
+        </collapsible-section>
+    </section>
 
     </section>
 </main>
@@ -216,5 +155,6 @@
 <custom-footer></custom-footer>
 
 <script src="assets/scripts/elems.js"></script>
+<script src="assets/scripts/update-honours.js" type="module"></script>
 </body>
 </html>
