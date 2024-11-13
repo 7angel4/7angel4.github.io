@@ -1,11 +1,19 @@
+/* Overwrite collapsible.css */
 .collapsible-button {
     background-color: #FFF4C2;
-    margin-bottom: 2rem
+    margin-bottom: 1rem;  /* smaller spacing between button and collapsible contents */
 }
 
+/* controls the collapsible banner display */
+#projects collapsible-section {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+/* controls heading contents spacing */
 #research {
     display: block;
-    margin: 0 0 1rem 0;
+    margin: 0;
     font-family: 'Inter', sans-serif;
 }
 
@@ -16,10 +24,6 @@
     line-height: 1.7rem;
 }
 
-#research, #projects {
-    margin-bottom: 2rem;
-}
-
 #research h2, #projects h2 {
     background-color: #FFF4C2;
     color: #7b694e;
@@ -27,7 +31,7 @@
     border-radius: 8px;
     font-size: 1.5rem;  /* emphasis on research */
     font-weight: bold;
-    margin-bottom: 1rem; /* Adds space below header */
+    margin-bottom: 1rem; /* Adds space below header "Research" */
 }
 
 
@@ -89,4 +93,14 @@
 #honours-list {
     list-style-type: none; /* Remove list styling */
     padding: 0; /* Remove any default padding */
+}
+
+
+/* Overall styling */
+section {
+    margin-top: 1rem  /* controls spacing between banners */
+}
+
+section:nth-of-type(1) {
+    margin-top: 0  /* no additional spacing before */
 }
