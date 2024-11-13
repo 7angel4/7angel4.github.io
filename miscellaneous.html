@@ -6,6 +6,63 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <title>Miscellaneous - Angel He's Personal Website</title>
   <link rel="stylesheet" href="assets/main.css">
+  <style>
+    #miscellaneous {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* Creates two equal-width columns */
+      gap: 3rem; /* Adjusts space between the grid items */
+    }
+
+    #miscellaneous .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+      gap: 20px; /* Adjust the gap between items */
+    }
+
+    #miscellaneous .grid-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    #miscellaneous .grid-item img {
+      width: 90%; /* Ensure the images fill the container */
+      height: auto; /* Keep the aspect ratio intact */
+      max-width: 300px; /* Set a max-width to control the size of the images */
+      margin-top: 1rem; /* Adds some space between text and image */
+    }
+
+    #miscellaneous h2, #miscellaneous p {
+      text-align: center;
+    }
+
+    .image-figure {
+      display: inline-block;
+      text-align: center; /* Center the image and caption */
+      margin-top: 1rem; /* Adds some space above the image */
+    }
+
+    .image-caption {
+      font-size: 0.9rem; /* Makes the caption smaller */
+      color: #555; /* Adjust caption color */
+      margin-top: 0.5rem; /* Adds some space between the image and caption */
+    }
+
+    #miscellaneous a {
+      color: #006BC8; /* Link color */
+      text-decoration: none;
+    }
+
+    #miscellaneous a:hover {
+      text-decoration: underline;
+    }
+
+    #miscellaneous .taekwondo-img {
+      width: auto;
+      height: 300px;
+    }
+  </style>
 </head>
 <body>
 <!-- Custom navigation bar -->
@@ -17,9 +74,70 @@
 <!-- Main content of the page -->
 <main>
   <section id="miscellaneous">
-    <h2>MBTI...</h2>
-    <p>Looks like I'm an <a href="https://www.16personalities.com/istj-personality">ISTJ</a>? 🤔</p>
-    <img src="assets/resources/ISTJ-A.png" width="20%"/>
+    <div class="grid-item">
+      <h2>MBTI...</h2>
+      <p>Looks like I'm an <a href="https://www.16personalities.com/istj-personality">ISTJ</a>? 🤔</p>
+      <img src="assets/resources/ISTJ-A.png" class="image" alt="ISTJ Image"/>
+      <figcaption class="image-caption">
+        Image credit: <a href="https://www.16personalities.com/" target="_blank">16Personalities</a>
+      </figcaption>
+    </div>
+
+    <div class="grid-item">
+      <h2>Erdős number...</h2>
+      <p>Mine is 4!</p>
+      <figure class="image-figure">
+        <img src="assets/resources/erdos.png" class="image" alt="Erdős Number Image"/>
+        <figcaption class="image-caption">
+          Image credit: <a href="https://www.vismath.eu/en/films/n-number/" target="_blank">VisMath</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="grid-item">
+      <h2>Taekwon-do...</h2>
+      <p>..'ed for ~10 years</p>
+      <figure class="image-figure">
+        <img src="assets/resources/taekwon-do.png" class="image taekwondo-img" alt="Taekwondo Image"/>
+        <figcaption class="image-caption">
+          Image credit: My mother Mrs. Xie
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="grid-item">
+      <h2>Coffee...</h2>
+      <p>My love is visible from my website's colours</p>
+      <figure class="image-figure">
+        <img src="assets/resources/coffee.png" class="image" alt="Coffee Image"/>
+        <figcaption class="image-caption">
+          Image credit: Entirely myself
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="grid-item">
+      <h2>Brunch...</h2>
+      <p>Meal with the highest prob. I'll accept an invitation for</p>
+      <figure class="image-figure">
+        <img src="assets/resources/brunch.png" class="image" alt="Brunch Image"/>
+        <figcaption class="image-caption">
+          Image credit: Myself
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="grid-item">
+      <h2>Photography...</h2>
+      <p>Very unprofessional</p>
+      <figure class="image-figure">
+        <img src="assets/resources/trinity-college-window.png" class="image"
+             alt="Trinity College's Window @ Oxford"/>
+        <figcaption class="image-caption">
+          Image credit: Proudly myself
+        </figcaption>
+      </figure>
+    </div>
   </section>
 </main>
 
