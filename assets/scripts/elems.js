@@ -15,13 +15,24 @@ class CustomNav extends HTMLElement {
     }
 }
 
-// Define custom footer element
 class CustomFooter extends HTMLElement {
     constructor() {
         super();
+        const currentYear = new Date().getFullYear();
         this.innerHTML = `
             <footer>
-                <p>&copy; 2023 <a href="https://github.com/7angel4">@7angel4</a></p>
+                <p>&copy; ${currentYear} <a href="https://github.com/7angel4">@7angel4</a></p>
+                <div class="footer-icons">
+                    <a href="mailto:angel.heyongxi.2004@gmail.com" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/angel-he-82b4221a9/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/7angel4" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </footer>
         `;
     }

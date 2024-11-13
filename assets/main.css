@@ -58,11 +58,14 @@ nav {
     margin-top: 2%;
 }
 
+nav > ul {
+    display: flex;
+    gap: 100px; /* Adjusts spacing between each list item */
+}
+
 nav > ul > li {
-    display: inline-block;
     list-style-type: none;
-    padding: 5px 25px;
-    width: auto;
+    padding: 5px 10px; /* Adjust padding as needed */
     color: white;
     font-size: 1.2rem;
 }
@@ -128,4 +131,30 @@ footer {
     bottom: 0;
     right: 0;
     margin: 1rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-icons a {
+    color: #333; /* Adjust to match your site's color scheme */
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.footer-icons a:hover {
+    color: #006BC8; /* Optional hover color for icons */
+}
+
+footer p {
+    margin-right: 20px; /* Adds space to the left of the text */
 }
