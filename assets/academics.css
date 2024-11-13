@@ -72,35 +72,45 @@
     margin-bottom: 1rem; /* Add spacing between honours */
 }
 
+/* Honour Name Styling */
 .honour-name {
     font-weight: bold;
+    font-size: 1rem;  /* Slightly larger font for better visibility */
+    /* add spacing below text with margin-bottom */
 }
 
-.honour-sponsor,
-.honour-amount,
+/* Honour Sponsor Styling */
+.honour-sponsor {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #7b694e;  /* Muted color for sponsor */
+}
+
+/* Honour Amount Styling */
+.honour-amount {
+    font-size: 0.9rem; /* Slightly larger font for amount */
+    color: #333; /* Default text color */
+}
+
+/* Honour Description Styling */
 .honour-description {
-    font-size: 0.9rem;
-    color: #333; /* Optional: subtle color for secondary information */
-    margin: 0.2rem 0;
+    font-size: 0.9rem; /* A bit smaller text for the description */
+    color: #555; /* Lighter grey color for description */
 }
 
-.honour-sponsor::before,
-.honour-amount::before,
-.honour-description::before {
-    content: ""; /* Clear any bullet points */
-}
-
+/* Honour List Styling */
 #honours-list {
-    list-style-type: none; /* Remove list styling */
-    padding: 0; /* Remove any default padding */
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
 }
 
-
-/* Overall styling */
+/* Section Styling */
 section {
-    margin-top: 1rem  /* controls spacing between banners */
+    margin-top: 1rem;
 }
 
+/* Remove extra spacing before first section */
 section:nth-of-type(1) {
-    margin-top: 0  /* no additional spacing before */
+    margin-top: 0;
 }

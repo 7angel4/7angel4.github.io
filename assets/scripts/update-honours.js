@@ -129,7 +129,21 @@ const honours = [
         description: ""
     },
     {
-        name: "High Distinction: Australian Mathematics Competition; Noether Mathematics Challenge for Young Australians; Mathematics Challenge for Young Australians",
+        name: "High Distinction: Australian Mathematics Competition",
+        year: "2017 – 2019",
+        sponsor: "Australian Mathematics Trust",
+        amount: "",
+        description: ""
+    },
+    {
+        name: "High Distinction: Noether Mathematics Challenge for Young Australians",
+        year: "2017 – 2019",
+        sponsor: "Australian Mathematics Trust",
+        amount: "",
+        description: ""
+    },
+    {
+        name: "High Distinction: Mathematics Challenge for Young Australians",
         year: "2017 – 2019",
         sponsor: "Australian Mathematics Trust",
         amount: "",
