@@ -153,13 +153,19 @@
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media (min-width: 40rem) {
     .timeline {
         grid-template-columns: 1fr var(--line-w) 1fr;
     }
 
+    /* Make the middle line of the timeline shorter */
     .timeline::before {
+        content: "";
         grid-column: 2;
+        grid-row: 1 / span 10; /* Shorter line */
+        background: rgb(225, 225, 225); /* Timeline line color */
+        border-radius: calc(var(--line-w) / 2);
     }
 
     .timeline li:nth-child(odd) {
@@ -187,5 +193,45 @@
 
     .timeline li:nth-child(odd) .time {
         border-radius: 0 calc(var(--timeH) / 2) calc(var(--timeH) / 2) 0;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust font sizes and time indicator for smaller screens */
+    .timeline li .time {
+        font-size: 0.9rem; /* Smaller font size for time indicator */
+        --timeH: 2.5rem; /* Reduce height for time indicator */
+    }
+
+    /* Adjust title and subjects for smaller screens */
+    .timeline li .title,
+    .timeline li .subjects {
+        padding-block-end: 0.7rem; /* Reduce bottom padding */
+    }
+
+    .timeline li .title {
+        font-size: 0.8rem; /* Smaller font size for title */
+    }
+
+    .timeline li .subjects {
+        font-size: 0.8rem; /* Smaller font size for subjects */
+        margin: 0;
+    }
+
+    /* Reduce column and row gaps */
+    .timeline {
+        column-gap: 0.5rem;
+        row-gap: 0.9rem;
+    }
+
+    /* Adjust margin between timeline items */
+    .timeline li {
+        margin-inline: 1rem; /* gap between dots of the two columns on either side of timeline */
+    }
+
+    /* Adjust size of the circle indicator */
+    .timeline li .time::after {
+        width: 1.3rem;
+        border: 0.2rem solid var(--accent-color);
     }
 }
