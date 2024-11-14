@@ -176,3 +176,71 @@ footer p {
     margin-right: 30px; /* Adjusts space from text to icons */
     font-size: 1rem; /* no increase in font size */
 }
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    /* Body adjustments */
+    body {
+        margin: 8rem 2rem;
+    }
+
+    /* Header and H1 adjustments */
+    h1 {
+        font-size: 3rem; /* Scales down heading font */
+    }
+
+    /* Navbar adjustments */
+    nav > ul {
+        flex-direction: column; /* Stack nav items vertically on mobile */
+        gap: 20px; /* Reduces spacing between items */
+    }
+
+    nav > ul > li {
+        font-size: 1rem;
+    }
+
+    /* Footer adjustments */
+    footer {
+        flex-direction: column; /* Stack footer content vertically */
+        padding: 10px; /* Adjusts padding */
+        gap: 10px; /* Space between icons and text */
+    }
+
+    /* Main content sections */
+    .profile-photo img {
+        position: relative;
+        width: 60%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Crop image if necessary */
+        margin: 1rem auto; /* Center the image */
+        border-radius: 8px; /* Add some rounding if desired */
+    }
+
+    .intro-text {
+        width: 100%; /* Allow the intro text to use full width */
+        margin-top: 1rem; /* Add space above the text */
+    }
+
+    /* Adjustments for lists */
+    ul li {
+        margin-left: 0.5rem; /* Reduced indent on mobile */
+    }
+
+    .footer-icons {
+        gap: 10px; /* Less space between icons on mobile */
+    }
+
+    /* Footer padding to add space above (avoid overlapping main text) */
+    footer {
+        position: fixed;        /* Keeps the footer fixed in place */
+        bottom: 0;              /* Positions it at the bottom of the viewport */
+        left: 0;                /* Aligns it with the left edge of the screen */
+        width: 100vw;           /* Ensures it spans the full viewport width */
+        padding: 13px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #FEFAE0;
+        z-index: 10;            /* Ensures it stays above other elements */
+    }
+}

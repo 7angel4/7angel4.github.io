@@ -49,3 +49,12 @@ collapsible-section {
     padding: 10px;
     background-color: #f1f1f1;
 }
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    /* Collapsible sections adjustments */
+    .collapsible-button {
+        font-size: 16px; /* Smaller font size for mobile */
+        padding: 10px;
+    }
+}

@@ -114,3 +114,13 @@ section {
 section:nth-of-type(1) {
     margin-top: 0;
 }
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    /* Projects and research section headings */
+    #projects h2,
+    #research h2 {
+        font-size: 1.3rem;
+        padding: 8px;
+    }
+}

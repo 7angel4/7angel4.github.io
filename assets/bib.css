@@ -70,3 +70,18 @@
 .abstract-content.active {
     display: block;
 }
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    /* Bibliography items */
+    .bib-item {
+        flex-direction: column; /* Stack thumbnail and content */
+        padding: 0.5rem;
+    }
+
+    .thumbnail {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1rem; /* Centers and spaces thumbnail */
+    }
+}
