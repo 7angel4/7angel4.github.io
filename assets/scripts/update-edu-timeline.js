@@ -61,19 +61,40 @@ const addTimeBlocks = (academicPeriods, timelineElemId) => academicPeriods.forEa
 
 
 // Oxford
-const oxford = [
+const oxfordDPhil = [
+]
+addTimeBlocks(oxfordDPhil, "oxford-dphil-history");
+
+const oxfordMSc = [
     {
         time: '2024 Michaelmas Term',
-        title: 'First sem at Oxford (& in UK)!',
+        title: 'First term at Oxford (& in UK)!',
         subjects: [
             'Bayesian Statistical Probabilistic Programming',
             'Computer-Aided Formal Verification',
             'Concurrent Algorithms & Data Structures',
             'Graph Representation Learning'
         ]
+    },
+    {
+        time: '2025 Hilary Term',
+        title: 'Last coursework term!',
+        subjects: [
+            'Automota, Logic and Games',
+            'Foundations of Self-Programming Agents',
+            'Geometric Deep Learning',
+            'Uncertainty in Deep Learning'
+        ]
+    },
+    {
+        time: '2025 Trinity Term',
+        title: 'Final term!',
+        subjects: [
+            'Thesis: <a href="academics.html">Uncertain Concurrent Stochastic Games</a>'
+        ]
     }
     ];
-addTimeBlocks(oxford, "oxford-history");
+addTimeBlocks(oxfordMSc, "oxford-msc-history");
 
 // CMU
 const springSem2024 = {
