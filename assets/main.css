@@ -109,8 +109,14 @@ a:hover {
 
 /** Photo **/
 .profile-photo {
-    position: relative;
+    float: right;
+    width: 25%;
+    max-width: 400px;
+    margin-right: 1rem;
 }
+.profile-photo video { width:100%; display:block; height:auto; }
+
+
 
 .profile-photo img {
     position: absolute;
