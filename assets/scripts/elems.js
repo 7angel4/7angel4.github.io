@@ -95,8 +95,11 @@ class BibItem extends HTMLElement {
         const thumbnail = this.getAttribute('thumbnail');
         const abstract = this.getAttribute('abstract');
         const pdfLink = this.getAttribute('pdf-link');
+        const extendedPdfLink = this.getAttribute('extended-pdf-link');
         const codeLink = this.getAttribute('code-link');
         const websiteLink = this.getAttribute('website-link');
+        const posterLink = this.getAttribute('poster-link');
+        const presentationLink = this.getAttribute('presentation-link');
 
         // HTML structure for the bibliography item
         this.innerHTML = `
@@ -108,9 +111,12 @@ class BibItem extends HTMLElement {
                     ${source && year ? `<p class="source-year">${source}, ${year}</p>` : ''}
                     <div class="buttons">
                         ${abstract ? `<button class="collapsible">Abstract</button>` : ''}
-                        ${pdfLink ? `<a href="${pdfLink}" class="button" target="_blank">PDF</a>` : ''}
+                        ${pdfLink ? `<a href="${pdfLink}" class="button" target="_blank">Main</a>` : ''}
                         ${codeLink ? `<a href="${codeLink}" class="button" target="_blank">Code</a>` : ''}
                         ${websiteLink ? `<a href="${websiteLink}" class="button" target="_blank">Website</a>` : ''}
+                        ${extendedPdfLink ? `<a href="${extendedPdfLink}" class="button" target="_blank">Extended version</a>` : ''}
+                        ${posterLink ? `<a href="${posterLink}" class="button" target="_blank">Poster</a>` : ''}
+                        ${presentationLink ? `<a href="${presentationLink}" class="button" target="_blank">Talk</a>` : ''}
                     </div>
                     ${abstract ? `<div class="abstract-content">${abstract}</div>` : ''}
                 </div>
