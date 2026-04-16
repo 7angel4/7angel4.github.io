@@ -112,9 +112,9 @@ class BibItem extends HTMLElement {
                     <div class="buttons">
                         ${abstract ? `<button class="collapsible">Abstract</button>` : ''}
                         ${pdfLink ? `<a href="${pdfLink}" class="button" target="_blank">Main</a>` : ''}
+                        ${extendedPdfLink ? `<a href="${extendedPdfLink}" class="button" target="_blank">Extended</a>` : ''}
                         ${codeLink ? `<a href="${codeLink}" class="button" target="_blank">Code</a>` : ''}
                         ${websiteLink ? `<a href="${websiteLink}" class="button" target="_blank">Website</a>` : ''}
-                        ${extendedPdfLink ? `<a href="${extendedPdfLink}" class="button" target="_blank">Extended version</a>` : ''}
                         ${posterLink ? `<a href="${posterLink}" class="button" target="_blank">Poster</a>` : ''}
                         ${presentationLink ? `<a href="${presentationLink}" class="button" target="_blank">Talk</a>` : ''}
                     </div>
