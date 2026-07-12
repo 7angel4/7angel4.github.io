@@ -63,3 +63,12 @@ All notable changes to this website are documented in this file.
   screen sizes instead of a single breakpoint jump.
 - Commit attribution: history rewritten to remove Co-Authored-By trailers;
   commits are solely under Angel's name from now on.
+
+### Step 5: Scholar link, favicon, news trim
+- Added a Google Scholar icon to the homepage social row (uses the
+  Academicons icon font via CDN).
+- Favicon is now the 😇 emoji (inline SVG data URI on every page) — crisper
+  and more distinct at tab size than the coffee collage or a photo.
+- Front-page news trimmed to three items: new "May 2026 — joined VGG for a
+  rotation supervised by Prof. Andrea Vedaldi", plus TACAS 2026 and the
+  DPhil start (older items removed from `assets/data/news.js`).

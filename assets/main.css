@@ -220,6 +220,10 @@ custom-nav {
     text-decoration: none;
 }
 
+.social-row .ai {
+    font-size: 1.55rem;
+}
+
 .social-row .cv-link {
     font-size: 0.95rem;
     font-weight: 600;
