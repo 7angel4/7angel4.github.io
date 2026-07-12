@@ -45,3 +45,7 @@ All notable changes to this website are documented in this file.
   browser via a local server.
 - Note: news item dates (e.g. TACAS/ETAPS 2026 presentation month) are best
   guesses — please double-check them in `assets/data/news.js`.
+
+### Step 3: CV link
+- Added a "CV" button to the homepage social row, pointing to the uploaded
+  `assets/resources/academic/CV-AYH-AngelHe.pdf`.

@@ -220,6 +220,16 @@ custom-nav {
     text-decoration: none;
 }
 
+.social-row .cv-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    align-self: center;
+    border: 1.5px solid var(--brown);
+    border-radius: 6px;
+    padding: 0 0.35rem;
+    line-height: 1.4;
+}
+
 /* ==========================================================================
    News
    ========================================================================== */
