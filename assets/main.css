@@ -62,7 +62,7 @@ h1 {
 }
 
 .page-title {
-    font-size: 3.2rem;
+    font-size: clamp(2.4rem, 6vw, 3.2rem);
     margin: 1.5rem 0 0.5rem;
 }
 
@@ -169,7 +169,7 @@ custom-nav {
 }
 
 .hero-text .name {
-    font-size: 4rem;
+    font-size: clamp(2.9rem, 7vw, 4rem);
     margin-bottom: 0.2rem;
 }
 
@@ -562,7 +562,6 @@ main ul:not(.news-list):not(.teaching-list):not(.timeline):not(.pub-list) {
     }
 
     .hero-text .name {
-        font-size: 3rem;
         text-align: center;
     }
 
@@ -571,10 +570,12 @@ main ul:not(.news-list):not(.teaching-list):not(.timeline):not(.pub-list) {
     }
 
     .page-title {
-        font-size: 2.5rem;
         text-align: center;
     }
+}
 
+/* Phones: stack publication cards and news items */
+@media (max-width: 640px) {
     .pub-item {
         grid-template-columns: 1fr;
         gap: 0.9rem;

@@ -49,3 +49,17 @@ All notable changes to this website are documented in this file.
 ### Step 3: CV link
 - Added a "CV" button to the homepage social row, pointing to the uploaded
   `assets/resources/academic/CV-AYH-AngelHe.pdf`.
+
+### Step 4: Responsive refinements (phones / tablets / desktops)
+- Audited every page at 320, 375, 667 (phone landscape), 768 (iPad Mini),
+  820 (iPad Air), 1024, and 1440 px — no horizontal overflow anywhere,
+  including with all collapsibles and abstracts expanded.
+- Publication cards now keep the thumbnail-beside-text layout down to 640px
+  (previously stacked below 768px), so iPads in portrait use the full width;
+  they stack only on phones.
+- Miscellaneous grid switched to `auto-fit, minmax(230px, 1fr)` — fluidly
+  3 columns on desktop/iPad, 2 on phone landscape, 1 on phone portrait.
+- Hero name and page titles use `clamp()` for smooth font scaling between
+  screen sizes instead of a single breakpoint jump.
+- Commit attribution: history rewritten to remove Co-Authored-By trailers;
+  commits are solely under Angel's name from now on.
