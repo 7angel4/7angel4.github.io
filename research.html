@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research &mdash; Angel Y. He</title>
+    <meta name="description" content="Publications, projects, teaching, and awards of Angel Y. He.">
+    <link rel="icon" href="assets/resources/coffee.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/main.css">
+    <script src="assets/scripts/elems.js" defer></script>
+    <script src="assets/scripts/render-publications.js" type="module"></script>
+    <script src="assets/scripts/render-teaching.js" type="module"></script>
+    <script src="assets/scripts/render-honours.js" type="module"></script>
+</head>
+<body>
+    <custom-nav></custom-nav>
+
+    <main>
+        <h1 class="page-title">Research</h1>
+
+        <section id="publications" style="margin-top: 1rem;">
+            <h2 class="section-title">Publications &amp; Theses</h2>
+            <div class="pub-list" data-pub-list data-filter="publication"></div>
+        </section>
+
+        <section id="other-projects">
+            <collapsible-section text="Other things I've worked on">
+                <div class="pub-list" data-pub-list data-filter="project"></div>
+            </collapsible-section>
+        </section>
+
+        <section id="teaching">
+            <collapsible-section text="Teaching">
+                <ul class="teaching-list" id="teaching-list"></ul>
+            </collapsible-section>
+        </section>
+
+        <section id="scholarships-awards">
+            <collapsible-section text="Scholarships &amp; Awards">
+                <div id="honours-list"></div>
+            </collapsible-section>
+        </section>
+    </main>
+
+    <custom-footer></custom-footer>
+</body>
+</html>

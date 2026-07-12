@@ -3,64 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angel He's personal website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Angel Y. He</title>
+    <meta name="description" content="Angel Y. He — DPhil student at the University of Oxford (AIMS CDT), working on formal and quantitative verification of probabilistic systems.">
+    <link rel="icon" href="assets/resources/coffee.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="assets/main.css">
-    <link rel="stylesheet" href="assets/timeline.css">
-    <script src="assets/scripts/elems.js" type="module"></script>
+    <script src="assets/scripts/elems.js" defer></script>
+    <script src="assets/scripts/render-news.js" type="module"></script>
+    <script src="assets/scripts/render-publications.js" type="module"></script>
 </head>
 <body>
-    <header>
-        <h1>Hiiiiii! It's Angel here!</h1>
-        <custom-nav></custom-nav>
-    </header>
+    <custom-nav></custom-nav>
 
     <main>
-        <div class="profile-container">
-<!--            <div class="profile-photo">-->
-<!--                <img src="assets/resources/Photograph-AYH.png" width="25%" alt="Angel's Photo"/>-->
-<!--            </div>-->
-            <div class="profile-photo">
-                <video src="assets/resources/21-to-22-AYH.mp4" autoplay loop muted playsinline>
-                </video>
-            </div>
-            <div class="intro-text">
+        <section class="hero" id="about">
+            <div class="hero-text">
+                <h1 class="name">Angel Y. He</h1>
+                <p class="tagline">DPhil Student &middot; Autonomous Intelligent Machines &amp; Systems (AIMS CDT) &middot; University of Oxford</p>
                 <p>
-                    I’m <b>Angel Y. He</b>, a DPhil student in the AIMS CDT at the University of Oxford.
-                    I previously completed an MSc in Advanced Computer Science at the University of Oxford and a
-                    Bachelor of Science in Computing and Software Systems at the University of Melbourne.
-                    <span style="color: #333;">Learn more about my academic progression <a href="education.html">here</a>.</span>
-
-                    <br><br>
-
-                    My research is driven by the role of probability in computer science as a unifying framework
-                    for <b>uncertainty, verification, and decision making</b>. I work on <b>formal and quantitative
-                    verification of probabilistic systems</b>, particularly under epistemic uncertainty, with a
-                    focus on <b>robustness and multi-agent interaction</b>.
-
-                    Motivated by recent advances in AI, I am increasingly interested in <b>reinforcement learning
-                    under uncertainty</b> and in bridging formal verification with learning-based methods, with the
-                    aim of providing robust, formally guaranteed solutions for autonomous and multi-agent systems.
-
-                    <br><br>
-
-                    I have worked on projects ranging from theoretical foundations to practical tool development.
+                    Hi! I'm Angel. I'm a DPhil student in the
+                    <a href="https://aims.robots.ox.ac.uk/" target="_blank" rel="noopener">AIMS CDT</a>
+                    at the University of Oxford, where I work with
+                    <a href="https://www.cs.ox.ac.uk/people/david.parker/home.html" target="_blank" rel="noopener">Prof.&nbsp;David Parker</a>
+                    on robust verification of concurrent stochastic games. Before that, I completed an
+                    MSc in Advanced Computer Science at Oxford and a BSc in Computing and Software Systems
+                    at the University of Melbourne.
+                </p>
+                <p>
+                    My research is driven by the role of probability in computer science as a unifying framework for
+                    <b>uncertainty, verification, and decision making</b>. I work on <b>formal and quantitative
+                    verification of probabilistic systems</b>, particularly under epistemic uncertainty, with a focus
+                    on <b>robustness and multi-agent interaction</b>. Motivated by recent advances in AI, I am
+                    increasingly interested in <b>reinforcement learning under uncertainty</b> and in bridging formal
+                    verification with learning-based methods, with the aim of providing robust, formally guaranteed
+                    solutions for autonomous and multi-agent systems.
+                </p>
+                <p>
                     My undergraduate research was carried out under the supervision of the wonderful
-                    <a href="https://researchers.ms.unimelb.edu.au/~mholmes1@unimelb/">Prof. Mark Holmes</a> (Maaak),
-                    initially as an undergraduate vacation scholar and later as a graduate research assistant.
-
-                    Currently at Oxford, I am working with
-                    <a href="https://www.cs.ox.ac.uk/people/david.parker/home.html">Prof. David Parker</a>,
-                    focusing on robust verification of concurrent stochastic games.
-
-                    <span style="color: #333;">Learn more about my academic work <a href="academics.html">here</a>.</span>
-
-                    <br><br>
-
-                    I enjoy collaborating and discussing research with others &mdash; feel free to get in touch.
+                    <a href="https://researchers.ms.unimelb.edu.au/~mholmes1@unimelb/" target="_blank" rel="noopener">Prof.&nbsp;Mark Holmes</a>
+                    (Maaak), initially as an undergraduate vacation scholar and later as a graduate research assistant.
+                </p>
+                <p>
+                    I enjoy collaborating and discussing research with others &mdash; feel free to
+                    <a href="mailto:angel.heyongxi.2004@gmail.com">get in touch</a>!
                 </p>
             </div>
-        </div>
+            <div class="hero-media">
+                <video src="assets/resources/21-to-22-AYH.mp4" autoplay loop muted playsinline aria-label="Angel Y. He"></video>
+                <div class="social-row">
+                    <a href="mailto:angel.heyongxi.2004@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/angel-he-82b4221a9/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/7angel4" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="news">
+            <h2 class="section-title">News</h2>
+            <ul class="news-list" data-news-list></ul>
+        </section>
+
+        <section id="research">
+            <h2 class="section-title">Research</h2>
+            <div class="pub-list" data-pub-list data-filter="selected"></div>
+            <p style="margin-top: 1rem;">
+                See <a href="research.html">the research page</a> for the full list of publications, projects,
+                teaching, and awards.
+            </p>
+        </section>
     </main>
 
     <custom-footer></custom-footer>

@@ -3,48 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education - Angel He's Personal Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Education &mdash; Angel Y. He</title>
+    <meta name="description" content="Academic progression of Angel Y. He.">
+    <link rel="icon" href="assets/resources/coffee.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="assets/main.css">
-    <link rel="stylesheet" href="assets/collapsible.css">
     <link rel="stylesheet" href="assets/timeline.css">
-    <style>
-        /* move first one closer to heading */
-        collapsible-section:nth-of-type(1) {
-            margin-top: 0
-        }
-    </style>
+    <script src="assets/scripts/elems.js" defer></script>
+    <script src="assets/scripts/render-education.js" type="module"></script>
 </head>
 <body>
-<header>
-    <h1>Education</h1>
     <custom-nav></custom-nav>
-</header>
-<main>
-    <collapsible-section text="University of Oxford &ndash; DPhil in Autonomous Intelligent Machines and Systems (EPSRC CDT)">
-        <ul id="oxford-dphil-history" class="timeline"><!-- items dynamically added by update-edu-timeline.js --></ul>
-    </collapsible-section>
-    <collapsible-section text="University of Oxford &ndash; MSc in Advanced Computer Science">
-    <ul id="oxford-msc-history" class="timeline"><!-- items dynamically added by update-edu-timeline.js --></ul>
-    </collapsible-section>
-    <collapsible-section text="Carnegie Mellon University &ndash; BSc Exchange">
-        <ul id="cmu-history" class="timeline"><!-- items dynamically added by update-edu-timeline.js --></ul>
-    </collapsible-section>
-    <collapsible-section text="University of Melbourne &ndash; BSc in Computing & Software Systems">
-        <ul id="unimelb-history" class="timeline"><!-- items dynamically added by update-edu-timeline.js --></ul>
-    </collapsible-section>
-    <collapsible-section text="Other academic programs">
-        <ul id="other-history" class="timeline"><!-- items dynamically added by update-edu-timeline.js --></ul>
-    </collapsible-section>
-</main>
 
-<!-- Custom footer -->
-<custom-footer></custom-footer>
+    <main>
+        <h1 class="page-title">Education</h1>
 
-<!-- Load elems.js first (defines custom elements like collapsible-section) -->
-<script src="assets/scripts/elems.js"></script>
+        <collapsible-section text="University of Oxford &ndash; DPhil in Autonomous Intelligent Machines and Systems (EPSRC CDT)" open>
+            <ul id="oxford-dphil-history" class="timeline"></ul>
+        </collapsible-section>
+        <collapsible-section text="University of Oxford &ndash; MSc in Advanced Computer Science">
+            <ul id="oxford-msc-history" class="timeline"></ul>
+        </collapsible-section>
+        <collapsible-section text="Carnegie Mellon University &ndash; BSc Exchange">
+            <ul id="cmu-history" class="timeline"></ul>
+        </collapsible-section>
+        <collapsible-section text="University of Melbourne &ndash; BSc in Computing &amp; Software Systems">
+            <ul id="unimelb-history" class="timeline"></ul>
+        </collapsible-section>
+        <collapsible-section text="Other academic programs">
+            <ul id="other-history" class="timeline"></ul>
+        </collapsible-section>
+    </main>
 
-<!-- Then load update-edu-timeline.js (relies on elems.js) -->
-<script src="assets/scripts/update-edu-timeline.js" type="module"></script>
+    <custom-footer></custom-footer>
 </body>
 </html>

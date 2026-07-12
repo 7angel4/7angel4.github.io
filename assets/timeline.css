@@ -1,6 +1,6 @@
 :root {
-    --accent-color: #3498db; /* Custom accent color */
-    --bg-color: #ffffff; /* Background color for timeline cards */
+    --accent-color: #8D7B68; /* Custom accent color (overridden per item) */
+    --bg-color: #FFFBF0; /* Background color for timeline cards (matches --surface) */
     --col-gap: 2rem; /* Column gap */
     --row-gap: 2rem; /* Row gap between timeline items */
     --line-w: 0.25rem; /* Width of the timeline line */
