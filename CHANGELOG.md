@@ -96,3 +96,7 @@ All notable changes to this website are documented in this file.
   collapsible header, but with an outward arrow (↗) instead of the chevron.
 - Removed the now-unused DPhil timeline entry from `assets/data/education.js`
   (a comment there says how to turn it back into a timeline).
+
+### Miscellaneous: reworded cards
+- Coffee: "I like coffee because it gives me the illusion that I might be awake".
+- Brunch: "Fav. meal of the day".
