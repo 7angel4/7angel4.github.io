@@ -7,7 +7,7 @@ Glad to see you here. This is my personal website: [https://7angel4.github.io/](
 | Page | Purpose |
 | --- | --- |
 | `index.html` | Homepage: bio, news, selected research |
-| `research.html` | Full publications & theses, other projects, teaching, awards |
+| `research.html` | Publications, other projects (incl. theses), teaching, awards |
 | `education.html` | Education timelines |
 | `miscellaneous.html` | Fun facts |
 
