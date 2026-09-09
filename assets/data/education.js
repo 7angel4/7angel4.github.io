@@ -4,14 +4,9 @@
  * The `target` is the id of the <ul class="timeline"> element on education.html.
  */
 export const EDUCATION = [
-    {
-        target: "oxford-dphil-history",
-        heading: "University of Oxford – DPhil in Autonomous Intelligent Machines and Systems (EPSRC CDT)",
-        periods: [
-            // Add DPhil terms here as they happen, e.g.:
-            // { time: '2025 Michaelmas Term', title: 'First DPhil term!', subjects: ['...'] },
-        ],
-    },
+    // The DPhil section on education.html is a direct link to the AIMS CDT site
+    // rather than a timeline; add an entry with target "oxford-dphil-history"
+    // (and a matching <ul> on the page) to turn it back into one.
     {
         target: "oxford-msc-history",
         heading: "University of Oxford – MSc in Advanced Computer Science",

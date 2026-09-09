@@ -87,3 +87,12 @@ All notable changes to this website are documented in this file.
   thesis and the 3-player betting games poster moved to "Other things I've
   worked on" (`category: 'project'`).
 - Teaching: added "B20, Machine Learning Lab @ University of Oxford".
+
+### Education: DPhil banner links to the AIMS CDT
+- The "University of Oxford – DPhil in AIMS (EPSRC CDT)" banner is now a link
+  to <https://aims.robots.ox.ac.uk/> instead of an expandable (empty) section,
+  so the "Coming soon..." placeholder is gone.
+- Added a `.section-link` style in `main.css`: same banner look as a
+  collapsible header, but with an outward arrow (↗) instead of the chevron.
+- Removed the now-unused DPhil timeline entry from `assets/data/education.js`
+  (a comment there says how to turn it back into a timeline).

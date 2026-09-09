@@ -396,7 +396,8 @@ collapsible-section {
     margin: 1.4rem 0;
 }
 
-.collapsible-button {
+.collapsible-button,
+.section-link {
     width: 100%;
     display: block;
     text-align: left;
@@ -428,8 +429,33 @@ collapsible-section {
     transform: translateY(-50%) rotate(180deg);
 }
 
-.collapsible-button:hover {
+.collapsible-button:hover,
+.section-link:hover {
     background-color: #FBEDB6;
+}
+
+/* Banner styled like a collapsible header, but links out instead of expanding */
+.section-link {
+    margin: 1.4rem 0;
+}
+
+.section-link::after {
+    content: "\2197";
+    font-size: 1rem;
+    color: var(--tan-dark);
+    position: absolute;
+    right: 1.1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease;
+}
+
+.section-link:hover {
+    text-decoration: none;
+}
+
+.section-link:hover::after {
+    transform: translate(2px, calc(-50% - 2px));
 }
 
 .collapsible-content {
