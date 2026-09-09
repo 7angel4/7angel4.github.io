@@ -72,3 +72,18 @@ All notable changes to this website are documented in this file.
 - Front-page news trimmed to three items: new "May 2026 — joined VGG for a
   rotation supervised by Prof. Andrea Vedaldi", plus TACAS 2026 and the
   DPhil start (older items removed from `assets/data/news.js`).
+
+## 2026-09-09 — New paper & content updates
+
+### Research: new paper, front-page selection, reorganisation
+- Added **Robust PAC Learning of Concurrent Stochastic Games** (He & Parker,
+  arXiv:2609.04189) to `assets/data/publications.js`, featured on the homepage.
+- Generated a thumbnail for it (`robust-pac-csg-thumbnail.png`) by extracting
+  the four sample-complexity scaling subplots from the paper's Figure 1 and
+  arranging them 2×2 at the 4:3 ratio the publication cards use.
+- Homepage Research now shows only the two newest papers: the PAC paper and
+  *Robust Verification of Concurrent Stochastic Games* ("All In" unfeatured).
+- Research page heading "Publications & Theses" → "Publications"; the MSc
+  thesis and the 3-player betting games poster moved to "Other things I've
+  worked on" (`category: 'project'`).
+- Teaching: added "B20, Machine Learning Lab @ University of Oxford".

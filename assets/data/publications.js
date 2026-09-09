@@ -15,6 +15,33 @@
  */
 export const PUBLICATIONS = [
     {
+        title: "Robust PAC Learning of Concurrent Stochastic Games",
+        authors: "Angel Y. He, David Parker",
+        venue: "arXiv preprint",
+        year: 2026,
+        thumbnail: "assets/resources/thumbnails/robust-pac-csg-thumbnail.png",
+        selected: true,
+        category: "publication",
+        abstract: `We introduce the first Probably Approximately Correct (PAC) learning framework for
+            general-sum concurrent stochastic games (CSGs) with transition uncertainty, while addressing the
+            challenge of Nash equilibrium (NE) existence. Our algorithm maintains data-driven
+            L<sup>1</sup> confidence sets over transition kernels and solves a robust CSG to compute a
+            social-welfare optimal &epsilon;-NE, using a robust MDP-based exploration mechanism to drive joint
+            state-action coverage. Crucially, we introduce a <i>Nash margin</i> characterisation that enables
+            principled reasoning about equilibrium existence: the framework either returns an
+            &epsilon;-approximate NE whose social-welfare value is &epsilon;-close to optimal, or provides a
+            sound certificate that no exact NE exists. Under a minimum reachability condition
+            <i>p</i><sub>reach</sub> &gt; 0 over relevant state-action pairs, the algorithm terminates after a
+            polynomial number of trajectory samples, with sample complexity
+            &Otilde;(<i>R</i><sub>max</sub><sup>2</sup> <i>H</i><sup>4</sup> |<i>S</i>|<sup>2</sup> |<i>A</i>| /
+            (<i>p</i><sub>reach</sub> &epsilon;<sup>2</sup>)). Empirical results on benchmark CSGs demonstrate
+            near-optimal performance, correct handling of equilibrium (non-)existence, and sample complexity
+            consistent with theory.`,
+        links: {
+            paper: "https://arxiv.org/abs/2609.04189",
+        },
+    },
+    {
         title: "Robust Verification of Concurrent Stochastic Games",
         authors: "Angel Y. He, David Parker",
         venue: "32nd International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS)",
@@ -48,7 +75,7 @@ export const PUBLICATIONS = [
         venue: "arXiv preprint",
         year: 2024,
         thumbnail: "assets/resources/thumbnails/all-in-thumbnail.png",
-        selected: true,
+        selected: false,
         category: "publication",
         abstract: `We present a computer assisted proof for a result concerning a three player betting game,
             introduced by Angel and Holmes. The three players start with initial capital x,y,z&gt;0 respectively.
@@ -75,7 +102,7 @@ export const PUBLICATIONS = [
         year: 2025,
         thumbnail: "assets/resources/thumbnails/UCSG-thumbnail.png",
         selected: false,
-        category: "publication",
+        category: "project",
         abstract: `Autonomous systems often operate in multi-agent environments where decisions are
             stochastic, strategic, and concurrent. Concurrent stochastic games (CSGs) capture these dynamics
             but assume precise transition probabilities &mdash; an unrealistic requirement in many real-world
@@ -100,7 +127,7 @@ export const PUBLICATIONS = [
         year: 2023,
         thumbnail: "assets/resources/thumbnails/3-player-betting-game-thumbnail.png",
         selected: false,
-        category: "publication",
+        category: "project",
         abstract: `We study two variants of the models examined by Prof. Persi Diaconis.
             Denote the players&rsquo; fortunes at each round as (X&#8345;,Y&#8345;,Z&#8345;) &isin; &#8469;&sup3;,
             which evolves as a Markov chain. Write (X&#8320;,Y&#8320;,Z&#8320;) = (x,y,z).

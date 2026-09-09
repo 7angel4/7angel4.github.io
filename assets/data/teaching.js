@@ -3,6 +3,12 @@
  */
 export const TEACHING = [
     {
+        code: "B20",
+        codeUrl: "https://eng.ox.ac.uk/",
+        name: "Machine Learning Lab",
+        institution: "University of Oxford",
+    },
+    {
         code: "COMP20003",
         codeUrl: "https://handbook.unimelb.edu.au/2023/subjects/comp20003",
         name: "Algorithms & Data Structures",
