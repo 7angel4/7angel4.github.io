@@ -8,7 +8,9 @@
  *   year       (optional) — number or string
  *   thumbnail  (optional) — path to an image under assets/resources/thumbnails/
  *   abstract   (optional) — HTML string; shown behind an "Abstract" toggle
- *   note       (optional) — short highlight line shown under the venue (e.g. "Oral presentation")
+ *   note       (optional) — short highlight line shown under the venue. Only for a
+ *                          distinction above the default, e.g. "Spotlight" or "Oral
+ *                          presentation" — plain poster acceptances are not noted.
  *   selected   (optional) — true = featured in the homepage Research section
  *   category   (required) — 'publication' (papers/theses) or 'project' (other work)
  *   links      (optional) — any of: paper, extended, code, website, poster, talk
@@ -19,7 +21,6 @@ export const PUBLICATIONS = [
         authors: "Angel Y. He, David Parker",
         venue: "40th Annual Conference on Neural Information Processing Systems (NeurIPS)",
         year: 2026,
-        note: "Poster presentation",
         thumbnail: "assets/resources/thumbnails/robust-pac-csg-thumbnail.png",
         selected: true,
         category: "publication",

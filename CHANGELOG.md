@@ -105,8 +105,10 @@ All notable changes to this website are documented in this file.
 
 - *Robust PAC Learning of Concurrent Stochastic Games* is now listed as
   accepted at the **40th Annual Conference on Neural Information Processing
-  Systems (NeurIPS), 2026**, replacing the "arXiv preprint" venue, with a
-  "Poster presentation" note line.
+  Systems (NeurIPS), 2026**, replacing the "arXiv preprint" venue.
+- Convention (documented on the `note` field in `publications.js`): the note
+  line is only for a distinction above the default — "Spotlight" or "Oral
+  presentation". Plain poster acceptances are not noted.
 - One edit in `assets/data/publications.js` updates both the homepage Research
   section and the Research page, since both render from that file.
 - The "Paper" button still points at the arXiv version; when the proceedings
