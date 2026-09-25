@@ -100,3 +100,15 @@ All notable changes to this website are documented in this file.
 ### Miscellaneous: reworded cards
 - Coffee: "I like coffee because it gives me the illusion that I might be awake".
 - Brunch: "Fav. meal of the day".
+
+## 2026-09-25 — NeurIPS 2026 acceptance
+
+- *Robust PAC Learning of Concurrent Stochastic Games* is now listed as
+  accepted at the **40th Annual Conference on Neural Information Processing
+  Systems (NeurIPS), 2026**, replacing the "arXiv preprint" venue, with a
+  "Poster presentation" note line.
+- One edit in `assets/data/publications.js` updates both the homepage Research
+  section and the Research page, since both render from that file.
+- The "Paper" button still points at the arXiv version; when the proceedings
+  appear, set `links.paper` to the published version and move the arXiv URL to
+  `links.extended` (as the TACAS entry does).

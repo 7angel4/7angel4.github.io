@@ -17,8 +17,9 @@ export const PUBLICATIONS = [
     {
         title: "Robust PAC Learning of Concurrent Stochastic Games",
         authors: "Angel Y. He, David Parker",
-        venue: "arXiv preprint",
+        venue: "40th Annual Conference on Neural Information Processing Systems (NeurIPS)",
         year: 2026,
+        note: "Poster presentation",
         thumbnail: "assets/resources/thumbnails/robust-pac-csg-thumbnail.png",
         selected: true,
         category: "publication",
