@@ -148,3 +148,13 @@ All notable changes to this website are documented in this file.
 - Note: `robust-pac-csg/assets/poster.pdf` and `poster-thumb.jpg` were
   rendered from poster draft v7 with LibreOffice. Replace them with the
   final PowerPoint export, keeping the same file names.
+
+## 2026-10-14 — Project page moved to the prism-games repository
+
+- The project page now lives on the `gh-pages` branch of
+  [7angel4/prism-games](https://github.com/7angel4/prism-games/tree/gh-pages) and is served at
+  <https://7angel4.github.io/prism-games/>. It no longer uses this site's menu bar or shared files.
+- Removed `robust-pac-csg/` from this site, so its old address now shows a 404 page.
+- The NeurIPS entry's Website and Poster buttons in `assets/data/publications.js` point to the new page.
+- Reverted the `base` and `active` attributes of `<custom-nav>` in `assets/scripts/elems.js`, which only
+  the project page used.

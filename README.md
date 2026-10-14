@@ -10,7 +10,6 @@ Glad to see you here. This is my personal website: [https://7angel4.github.io/](
 | `research.html` | Publications, other projects (incl. theses), teaching, awards |
 | `education.html` | Education timelines |
 | `miscellaneous.html` | Fun facts |
-| `robust-pac-csg/` | Project page for the NeurIPS 2026 paper (its own `style.css`, `page.js` and `assets/`) |
 
 All shared styling lives in `assets/main.css` (design tokens are CSS variables at the top).
 Shared components (nav, footer, collapsible sections) live in `assets/scripts/elems.js`.
