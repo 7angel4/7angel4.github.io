@@ -114,3 +114,37 @@ All notable changes to this website are documented in this file.
 - The "Paper" button still points at the arXiv version; when the proceedings
   appear, set `links.paper` to the published version and move the arXiv URL to
   `links.extended` (as the TACAS entry does).
+
+## 2026-10-14 — Project page for the NeurIPS 2026 paper
+
+- New page `robust-pac-csg/index.html`, served at
+  <https://7angel4.github.io/robust-pac-csg/>. Sections: TL;DR, the algorithm
+  loop, abstract, the two challenges, how the method works (setting, L¹
+  confidence sets, exploration RMDP, Nash margin), Theorem 7, the RQ1–RQ3
+  results, the poster, BibTeX and acknowledgements.
+- The page is self-contained: its own `style.css`, `page.js` and `assets/`,
+  on top of the site's `main.css` and `elems.js` (nav and footer).
+  - Figures are inline SVG drawn for the page. Their maths is pre-rendered
+    as vector paths, so it needs no maths fonts.
+  - Maths in the text is rendered by KaTeX 0.16.22, loaded from jsDelivr.
+  - The RQ2 chart shows each bar's value on hover or keyboard focus and has
+    a "Show the data" table. RQ3 reuses the paper's Fig. 1 panels as vector SVGs.
+  - `assets/og-image.png` (1200×630) is the preview image that appears when
+    the link is shared.
+- Phones get narrow versions of the two wide figures (a portrait algorithm
+  loop and a stacked RQ2 chart) and of the two wide equations.
+  - Checked at 320, 360, 390, 430, 768, 1024 and 1280 px.
+  - Nothing overflows the page. The BibTeX block and the data table scroll
+    inside their boxes.
+- An independent pass checked every claim on the page against the
+  camera-ready paper; its corrections are included.
+- `assets/scripts/elems.js`: `<custom-nav>` takes two optional attributes
+  for pages in subfolders.
+  - `base="../"` is the prefix for the nav links.
+  - `active="research.html"` is the entry to highlight.
+  - Existing pages are unchanged.
+- `assets/data/publications.js`: the NeurIPS entry gains Code, Website (the
+  project page) and Poster buttons, on the homepage and the Research page.
+- Note: `robust-pac-csg/assets/poster.pdf` and `poster-thumb.jpg` were
+  rendered from poster draft v7 with LibreOffice. Replace them with the
+  final PowerPoint export, keeping the same file names.

@@ -41,6 +41,9 @@ export const PUBLICATIONS = [
             consistent with theory.`,
         links: {
             paper: "https://arxiv.org/abs/2609.04189",
+            code: "https://github.com/7angel4/prism-games/tree/csg-learning",
+            website: "robust-pac-csg/",
+            poster: "robust-pac-csg/assets/poster.pdf",
         },
     },
     {
