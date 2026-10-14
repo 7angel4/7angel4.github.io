@@ -9,20 +9,13 @@ const NAV_LINKS = [
 
 class CustomNav extends HTMLElement {
     connectedCallback() {
-        // Optional attributes for pages in subfolders (e.g. project pages):
-        //   base="../"              prefix for the nav links
-        //   active="research.html"  which nav entry to highlight
-        const base = this.getAttribute('base') || '';
-        const active = this.getAttribute('active');
-        const current = active || window.location.pathname.split('/').pop() || 'index.html';
-        const links = NAV_LINKS.map(({ href, label }) => {
-            // a subfolder page highlights its section, but is not that page itself (so no aria-current)
-            const state = href !== current ? '' : (active ? 'class="active"' : 'class="active" aria-current="page"');
-            return `<li><a href="${base}${href}" ${state}>${label}</a></li>`;
-        }).join('');
+        const current = window.location.pathname.split('/').pop() || 'index.html';
+        const links = NAV_LINKS.map(({ href, label }) =>
+            `<li><a href="${href}" ${href === current ? 'class="active" aria-current="page"' : ''}>${label}</a></li>`
+        ).join('');
         this.innerHTML = `
             <nav class="site-nav">
-                <a class="nav-wordmark" href="${base}index.html">Angel Y. He</a>
+                <a class="nav-wordmark" href="index.html">Angel Y. He</a>
                 <ul>${links}</ul>
             </nav>
         `;

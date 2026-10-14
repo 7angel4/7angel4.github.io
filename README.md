@@ -13,8 +13,6 @@ Glad to see you here. This is my personal website: [https://7angel4.github.io/](
 
 All shared styling lives in `assets/main.css` (design tokens are CSS variables at the top).
 Shared components (nav, footer, collapsible sections) live in `assets/scripts/elems.js`.
-Pages in subfolders use `<custom-nav base="../" active="research.html">`, so the nav links
-resolve from the subfolder and the right section is highlighted.
 
 ## How to update content
 
